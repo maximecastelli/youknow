@@ -1,0 +1,15 @@
+.audio-notes li {
+  display: none; }
+  .audio-notes li time {
+    display: none; }
+
+.audio-notes li.visible {
+  display: inherit; }
+
+.video-notes li {
+  display: none; }
+  .video-notes li time {
+    display: none; }
+
+.video-notes li.visible {
+  display: inherit; }

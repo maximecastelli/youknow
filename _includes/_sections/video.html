@@ -1,0 +1,22 @@
+<section class="video video-{{ include.title | downcase }} row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div id="player" data-id="{{ include.video.videoID }}" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+    </div>
+    <div class="title title-{{ include.title | downcase }} col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <h1>{{ include.title }}</h1>
+    </div>
+    <div class="views views-{{ include.title | downcase }} col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <h3 style="text-align: right;">12</h3>
+    </div>
+    <div class="video-notes">
+            <ul>
+                {% for note in include.video.videoNotes %}
+                <li>
+                    <h4>{{note.note}}</h4> 
+                    <p>{{note.noteContent}}</p>
+                    <time>{{note.noteTime}}</time>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+</section>

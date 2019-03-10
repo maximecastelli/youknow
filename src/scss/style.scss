@@ -1,0 +1,27 @@
+.audio-notes {
+    li{
+        display: none;
+        time{
+            display: none;
+        }
+    }
+    
+    li.visible{
+        display: inherit;
+    }
+
+}
+
+.video-notes {
+    li{
+        display: none;
+        time{
+            display: none;
+        }
+    }
+    
+    li.visible{
+        display: inherit;
+    }
+
+}
