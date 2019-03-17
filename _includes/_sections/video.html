@@ -12,12 +12,12 @@
     </div>
     <div class="video-notes row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <ul class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 offset-md-2">
-                {% assign notes = include.video.videoNotes %}
-                {% for note in notes %}
+                
+                {% for note in include.notes %}
                 <li>
                     <h4>{{note.note}}</h4> 
-                    <p>{{note.noteContent}}</p>
-                    <time>{{note.noteTime}}</time>
+                    <p>{{note.content}}</p>
+                    <time>{{note.videoTS}}</time>
                 </li>
                 {% endfor %}
             </ul>

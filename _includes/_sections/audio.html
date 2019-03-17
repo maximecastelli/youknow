@@ -15,12 +15,13 @@
                     <code>audio</code> element.
             </audio>
             <div class="audio-notes">
+
                 <ul>
-                    {% for note in include.audio.trackNotes %}
+                    {% for note in include.notes %}
                     <li>
-                        <h4>{{note.note}}</h4> 
-                        <p>{{note.noteContent}}</p>
-                        <time>{{note.noteTime}}</time>
+                        <h4>{{note.num}} - {{note.note}}</h4> 
+                        <p>{{note.content}}</p>
+                        <time>{{note.audioTS}}</time>
                     </li>
                     {% endfor %}
                 </ul>

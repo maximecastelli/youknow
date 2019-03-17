@@ -29,6 +29,9 @@ github_username:  jekyll
 
 # Build settings
 permalink: :title/
+
+includes:
+- assets/docs/notes
 #sass:
 #  sass_dir: src/css
 #markdown: kramdown
@@ -41,6 +44,8 @@ collections:
   posts:
     output: true
     permalink: /posts/:name
+  notes:
+    output: false
 
 exclude: ['package.json', 'src' , 'node_modules']
 include: ["posts"]
