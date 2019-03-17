@@ -3,8 +3,11 @@
   {% include head.html %}
   <body>
       {% include header.html %}
-      {% include _sections/video.html title=page.title video=page.video %}
-      {% include _sections/audio.html title=page.title audio=page.audio %}
+      <div class="post-content">
+        {% include _sections/video.html title=page.title video=page.video %}
+        {% include _sections/audio.html title=page.title audio=page.audio %}
+      </div>
+      
       
       {% include footer.html %}
   </body>

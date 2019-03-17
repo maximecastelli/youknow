@@ -1,16 +1,19 @@
 <section class="video video-{{ include.title | downcase }} row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <div id="player" data-id="{{ include.video.videoID }}" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div id="player" data-id="{{ include.video.videoID }}" class="row col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 offset-md-2">
 
     </div>
-    <div class="title title-{{ include.title | downcase }} col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-        <h1>{{ include.title }}</h1>
+    <div class="video-infos row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="title title-{{ include.title | downcase }} col-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 offset-md-2">
+            <h1>{{ include.title }}</h1>
+        </div>
+        <div class="views views-{{ include.title | downcase }} col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <h3 style="text-align: right;">12</h3>
+        </div>
     </div>
-    <div class="views views-{{ include.title | downcase }} col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <h3 style="text-align: right;">12</h3>
-    </div>
-    <div class="video-notes">
-            <ul>
-                {% for note in include.video.videoNotes %}
+    <div class="video-notes row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <ul class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 offset-md-2">
+                {% assign notes = include.video.videoNotes %}
+                {% for note in notes %}
                 <li>
                     <h4>{{note.note}}</h4> 
                     <p>{{note.noteContent}}</p>

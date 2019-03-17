@@ -1,3 +1,17 @@
 @import "bootstrap/bootstrap";
 @import "style";
 
+#player{height: 212.5px;}
+
+@include media-breakpoint-up(sm) { 
+    #player{height: 382.5px;}
+}
+@include media-breakpoint-up(md) { 
+    #player{height: 340px;}
+}
+@include media-breakpoint-up(lg) { 
+    #player{height: 440px;}
+}
+@include media-breakpoint-up(xl) {  
+    #player{height: 531.25px;}
+}

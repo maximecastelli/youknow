@@ -10,7 +10,10 @@ if(!localStorage.getItem('mode')){
 
 function setMode(mode){
     localStorage.setItem('mode', mode);
-    alert(localStorage.getItem('mode'));
+    //alert(localStorage.getItem('mode'));
+    document.body.classList = "";
+    document.body.classList += localStorage.getItem('mode');
+    setActive();
 }
 
 var clickMode = function(e){
@@ -18,6 +21,19 @@ var clickMode = function(e){
     var m = e.dataset.mode;
     console.log(m);
     setMode(m); 
+}
+
+document.body.classList += localStorage.getItem('mode');
+setActive();
+
+ function setActive(){
+    $('a.nav-link').each(function(){
+        if($(this).data('mode') == localStorage.getItem('mode')){
+            $(this).addClass('active');
+        }else{
+            $(this).removeClass('active');
+        }
+    });
 }
 
 
@@ -36,6 +52,7 @@ var vid = document.getElementById('player');
 var videoId = vid.dataset.id;
 var videotime = 0;
 var timeupdater = null;
+var vindex = 0;
 
 var vts = Array.prototype.slice.call(document.querySelectorAll('.video-notes time'));
 var vns = document.querySelectorAll('.video-notes li');
@@ -96,7 +113,7 @@ player.stopVideo();
 // when the time changes, this will be called.
 function onProgress(currentTime) {
     //console.log("running - " + currentTime);
-    for(var i=index; i<vts.length; i++){
+    for(var i=vindex; i<vts.length; i++){
         console.log('------------');
         if(vts[i]< currentTime + 0.33 && vts[i]> currentTime - 0.33){
             //alert("note "+i+" should appear");
@@ -105,7 +122,7 @@ function onProgress(currentTime) {
             //console.log(ns);
             console.log(n);
             show(n);
-            index = i+1;
+            vindex = i+1;
         }
     }
 }
@@ -138,14 +155,14 @@ audio.onprogress = function(){
 };
 */
 
-var index = 0;
+var aindex = 0;
 
 
 audio.ontimeupdate = function(){
     console.log("timeUpdate " + audio.currentTime); 
     var ct = audio.currentTime;
     
-    for(var i=index; i<ats.length; i++){
+    for(var i=aindex; i<ats.length; i++){
         console.log('------------');
         if(ats[i]< ct + 0.33 && ats[i]> ct - 0.33){
             //alert("note "+i+" should appear");
@@ -154,7 +171,7 @@ audio.ontimeupdate = function(){
             //console.log(ns);
             console.log(n);
             show(n);
-            index = i+1;
+            aindex = i+1;
         }
     }
 };

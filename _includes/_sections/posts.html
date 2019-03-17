@@ -1,11 +1,6 @@
-<div class="posts row">
-{% for post in site.posts %}
-    <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-        <img src="../assets/docs/img/{{ post.video.videoImg }}" class="img-fluid" alt="post img">
-        <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
-            {{ post.title }}
-        </a>
-    - <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
-    </div>
-{% endfor %}
+<div class="posts">
+    {% include _sections/posts-video.html %}
+    {% include _sections/posts-audio.html %}
+    {% include _sections/posts-text.html %}
+
 </div>
