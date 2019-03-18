@@ -85,6 +85,16 @@ gulp.task('audio', function() {
 		.pipe(gulp.dest('assets/docs/audio/'));
 });
 
+/*
+ * Pipe texts
+ */
+gulp.task('texts', function() {
+	return gulp.src('src/docs/texts/**/*.{txt,html,rtf}')
+		.pipe(plumber())
+		.pipe(gulp.dest('assets/docs/texts/'));
+});
+
+
 /**
  * Compile and minify js
  */
@@ -106,4 +116,4 @@ gulp.task('watch', function() {
 });
 
 //gulp.task('default', ['js', 'sass', 'browser-sync', 'watch']);
-gulp.task('default', gulp.series('js', 'sass', 'imagemin', 'audio', 'browser-sync', 'watch'));
+gulp.task('default', gulp.series('js', 'sass', 'imagemin', 'audio', 'texts','browser-sync', 'watch'));

@@ -181,6 +181,27 @@ var show = function(e){
 }
 
 
+// GRAB AND INSERT TEXTS FROM .txt FILES
+
+
+$(document).ready(function() {
+    
+    $("p.text-holder").each(function(){
+        console.log($(this).parent().data('src'));
+        var target = $(this);
+        $.ajax({
+            url : target.parent().data('src'),
+            dataType: "text",
+            success : function (data) {
+                target.html(data);
+            },
+            fail: function(xhr, textStatus, errorThrown){
+                target.html(textStatus);
+             }
+        });
+    });
+}); 
+
 
 //UTILITIES
 
@@ -201,6 +222,13 @@ function hasClass(ele,cls) {
     }
   }
   
+
+
+
+
+
+
+
 // ON LAISSE TOMBER SOUNDCLOUD TROP DE COMPLICATIONS POUR QUE DALLE
 // recuperation des infos SC
 

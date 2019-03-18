@@ -44,11 +44,12 @@ collections:
   posts:
     output: true
     permalink: /posts/:name
-  notes:
-    output: false
+  pages:
+    output: true
+    permalink: /pages/:name
 
 exclude: ['package.json', 'src' , 'node_modules']
-include: ["posts"]
+include: ["posts", "pages"]
 
 
 # Exclude from processing.
