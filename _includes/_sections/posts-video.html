@@ -1,11 +1,13 @@
 <div class="posts-video video row">
     {% for post in site.posts %}
-    <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+    
+    <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 {% if post.enable %}active{% endif %}" >
         <img src="assets/docs/img/{{ post.video.videoImg }}" class="img-fluid" alt="post img">
-        <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
-            {{ post.title }}
+        <a class="title" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
+            <span class="bullet"></span>
+            <h4>{{ post.title }}</h4>
         </a>
-    - <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
+    <span>Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></span> 
     </div>
 {% endfor %}
 </div>

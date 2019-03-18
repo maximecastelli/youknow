@@ -3,7 +3,8 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2019-02-04 17:39:06 +0100
 categories: jekyll update
-
+published: false
+enable: false
 
 notes: notes-1.md
 
