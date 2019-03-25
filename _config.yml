@@ -48,7 +48,7 @@ collections:
     output: true
     permalink: /pages/:name
 
-exclude: ['package.json', 'src' , 'node_modules']
+exclude: ['package.json', 'src' , 'node_modules', 'vendor']
 include: ["posts", "pages"]
 
 
