@@ -8,22 +8,21 @@
             style="align-self:baseline;"
             alt="image for {{ post.audio.trackID }}">
             <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <figcaption>
-                    
-                    
+                <figcaption>    
+                    <span class="audio-play" data-target="{{ post.audio.trackID }}">></span>
+                    <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title">
+                        <!--<span class="bullet"></span>  -->
                         
-                        <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title">
-                            <span class="bullet"></span>  
-                            <h3>{{ post.title }}</h3>
-                        </a>
-                    
+                        <h3>{{ post.title }}</h3>
+                    </a>
                 </figcaption>
-                <audio
+                <!--<audio
                     controls
                     src="assets/docs/audio/{{ post.audio.trackFile }}">
                         Your browser does not support the
                         <code>audio</code> element.
-                </audio>
+                </audio>-->
+                <div class="audio-wave" id="{{ post.audio.trackID }}" data-src="assets/docs/audio/{{ post.audio.trackFile }}"></div>
                 <br>
                 <span>Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></span>
                 <br>
@@ -35,7 +34,6 @@
     </div>
     {% endfor %}
 </div> 
-
 
 <!--
 <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">

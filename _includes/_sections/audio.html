@@ -6,15 +6,19 @@
          alt="image for {{ include.audio.trackID }}">
         <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
             <figcaption class="title">
+                <span class="audio-play" data-target="{{ post.audio.trackID }}">></span>
                 <span class="bullet"></span>
                 <h2> {{ include.title }}</h2>
             </figcaption>
+            <!--
             <audio
                 controls
                 src="../assets/docs/audio/{{ include.audio.trackFile }}">
                     Your browser does not support the
                     <code>audio</code> element.
             </audio>
+            -->
+            <div class="audio-wave" id="{{ include.audio.trackID }}" data-src="../assets/docs/audio/{{ include.audio.trackFile }}"></div>
             <div class="audio-notes">
 
                 <ul>

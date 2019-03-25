@@ -49,7 +49,8 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // Grab Video ID
 
 var vid = document.getElementById('player');
-var videoId = vid.dataset.id;
+console.log(vid);
+if(vid !== null)var videoId = vid.dataset.id;
 var videotime = 0;
 var timeupdater = null;
 var vindex = 0;
@@ -66,7 +67,7 @@ console.log(vts);
 // Create player
 var player;
 function onYouTubeIframeAPIReady() {
-console.log(videoId);
+//console.log(videoId);
 player = new YT.Player('player', {
     height: '850',
     width: '1280',
@@ -128,64 +129,94 @@ function onProgress(currentTime) {
 }
 
 //Audio API
+//WAVES
 
-// Get Audio Element
-const audio = document.querySelector('audio');
-
-// Get notes and timestamps
-var ats = Array.prototype.slice.call(document.querySelectorAll('.audio-notes time'));
+var waves = [];
 var ans = document.querySelectorAll('.audio-notes li');
-//
-for (var i=0; i<ats.length; i++){
-    ats[i]= ats[i].innerHTML;
-}
-console.log(ats);
 
-audio.addEventListener('play', (event) => {
-    console.log('audio starts');
+$('.posts-audio .audio-wave').each(function(i){
+    //console.log('Wave');
+    var trackID = $(this).attr('id');
+    var src = $(this).data('src');
+    var wave = createWave(trackID, src); 
+
+    //wave.on('play', pauseAll(i, waves)); 
+
+    waves.push(wave);
 });
 
+$('.audio-post .audio-wave').each(function(i){
+    //console.log('Wave');
+    var trackID = $(this).attr('id');
+    var src = $(this).data('src');
+    var wave = createWave(trackID, src); 
 
-audio.addEventListener('playing', (event) => {
-  console.log('audio is not longer paused');
-});
-/*
-audio.onprogress = function(){
-  console.log("progress " + audio.currentTime);  
-};
-*/
+    //wave.on('play', pauseAll(i, waves)); 
+    wave.on('ready', function () {
+        createRegions($('.audio-notes li'), 3, wave);
+    });
 
-var aindex = 0;
+    wave.on('region-in', function(region) {
+        
+        console.log("region-in");
+        console.log(region);
+        
+        var rIndex = region.id.slice(3);
 
+        //console.log(rIndex);
+        show(ans[rIndex]);
+        
+        region.once('out', function() {
+            console.log("region-out");
+            hide(ans[rIndex]);
+        });
+    });
 
-audio.ontimeupdate = function(){
-    console.log("timeUpdate " + audio.currentTime); 
-    var ct = audio.currentTime;
     
-    for(var i=aindex; i<ats.length; i++){
-        console.log('------------');
-        if(ats[i]< ct + 0.33 && ats[i]> ct - 0.33){
-            //alert("note "+i+" should appear");
-            //
-            var n = ans[i];
-            //console.log(ns);
-            console.log(n);
-            show(n);
-            aindex = i+1;
-        }
-    }
-};
+    waves.push(wave);
+});
 
-var show = function(e){
-    e.classList += "visible"; 
+$('.audio-play').each(function(i){
+    $(this).click(function(){
+        waves[i].playPause();
+        //wave[i].on('play', pauseAll(i, waves));
+    });
+});
+
+function createWave(trackID, src){
+    var wave = WaveSurfer.create({
+        container: "#"+trackID
+    });
+    wave.load(src);
+    return wave;
 }
+
+function createRegions(arr, nLength, ws){
+    //Generation de l'array de regions
+    for(var i=0; i<arr.length; i++){
+        //
+        //console.log(arr.eq(i).find('time').html());
+        var start = parseFloat(arr.eq(i).find('time').text());
+        var end = parseFloat(start+nLength);
+        //
+        ws.addRegion({
+            start: start,
+            end: end,
+            drag: false,
+            resize: false,
+            id: 'ws-'+i
+        });
+    }
+}
+
 
 
 // GRAB AND INSERT TEXTS FROM .txt FILES
 
 
 $(document).ready(function() {
-    
+    //
+    //
     $("p.text-holder").each(function(){
         console.log($(this).parent().data('src'));
         var target = $(this);
@@ -204,6 +235,15 @@ $(document).ready(function() {
 
 
 //UTILITIES
+
+var show = function(e){
+    if(!e.classList.contains("visible")) e.classList += "visible"; 
+}
+
+var hide = function(e){
+    if(e.classList.contains("visible")) e.classList.remove("visible"); 
+}
+
 
 function hasClass(ele,cls) {
     //return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
