@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <div class="post-content">
+        {% include _sections/video.html title=page.title video=page.video notes=page.notes date=page.date %}
+        {% include _sections/audio.html title=page.title audio=page.audio notes=page.notes date=page.date %}
+        {% include _sections/text.html title=page.title text=page.text notes=page.notes date=page.date %}
+      </div>
+      
+      
+      {% include footer.html %}
+  </body>
+</html>

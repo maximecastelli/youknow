@@ -1,0 +1,29 @@
+<section class="text text{{ include.title | downcase }} row">
+    <div class="text-title col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+        <div class="title col-12">
+            <span class="bullet"></span>
+            <h1>{{include.title}}</h1>
+        </div>
+        
+        <br>
+        <span class="text-date col-12">Posted on <time datetime="{{ include.date | date: '%Y-%m-%d' }}">{{ include.date | date_to_long_string }}</time></span>
+
+    </div>
+
+    <div class="text-content col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+        <div class="text-column col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" data-src="../assets/docs/texts/{{ include.text.textFile }}">
+            <p class="text-holder"></p>
+        </div>
+        <div class="text-notes col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <ul class="">
+                
+                    {% for note in include.notes %}
+                    <li>
+                        <h4>{{note.note}}</h4> 
+                        <p>{{note.content}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+        </div>
+    </div>
+</section>

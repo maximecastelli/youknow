@@ -1,0 +1,24 @@
+<script>
+/*
+  Scroll Muzli
+*/
+
+document.body.style.overflow = "hidden";
+
+
+window.addEventListener("wheel", myFunction);
+var inc = 0;
+function myFunction(e) {
+    var d = e.deltaY;
+    inc += Math.round(d*0.5);
+    console.log(d);
+    $('.loadbar').css({
+      'width'  : inc + 'px'
+    });
+
+    if(inc>150){
+      window.location.href = "_pages/home.html";
+      inc = 151;
+    }
+}
+</script>

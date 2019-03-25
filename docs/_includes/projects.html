@@ -1,0 +1,35 @@
+{% for project in site.projects %}
+{% assign i = forloop.index %}
+<section class="project section {{ project.title }}">
+
+
+
+
+  <div class="parallax">
+  <!-- start post -->
+
+    <h2 class="container"><span class="title">{{ project.title }}</span></h2>
+
+    <div class="description">
+      <p>{{ project.description }}</p>
+      <p><a href="{{ project.url }}">Case study &rarr;  </a></p>
+    </div>
+    <!-- background -->
+  	<div class="background" data-speed="0.01" data-revert="true" style="background-image: url('{{ site.baseurl }}/assets/img/{{ project.p-bgrd }}');">
+
+    </div>
+    <!-- foreground -->
+  	<div class="foreground" data-speed="0.02" style="background-image: url('{{ site.baseurl }}/assets/img/{{ project.p-frrd }}');">
+
+    </div>
+    <!-- middle -->
+  	<div class="middle" data-speed="0.01" style="background-image: url('{{ site.baseurl }}/assets/img/{{ project.p-mdrd }}');"></div>
+    <!-- text -->
+  	<div class="num" data-speed="0">{{ i }}</div>
+  <!-- end post -->
+  </div>
+
+
+</section>
+
+{% endfor %}

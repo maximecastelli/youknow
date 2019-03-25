@@ -1,0 +1,37 @@
+<div class="audio audio-{{include.title | downcase}} card ">
+    <figure class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">     
+        <img src="../assets/docs/img/{{ include.audio.trackImg }}"
+         class="card-img-top col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+         style="align-self:baseline;"
+         alt="image for {{ include.audio.trackID }}">
+        <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <figcaption class="title">
+                <span class="audio-play" data-target="{{ post.audio.trackID }}">></span>
+                <span class="bullet"></span>
+                <h2> {{ include.title }}</h2>
+            </figcaption>
+            <!--
+            <audio
+                controls
+                src="../assets/docs/audio/{{ include.audio.trackFile }}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+            -->
+            <div class="audio-wave" id="{{ include.audio.trackID }}" data-src="../assets/docs/audio/{{ include.audio.trackFile }}"></div>
+            <div class="audio-notes">
+
+                <ul>
+                    {% for note in include.notes %}
+                    <li>
+                        <h4>{{note.num}} - {{note.note}}</h4> 
+                        <p>{{note.content}}</p>
+                        <time>{{note.audioTS}}</time>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+    </figure>
+</div>

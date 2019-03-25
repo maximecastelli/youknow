@@ -1,0 +1,120 @@
+body{
+    overflow-x: hidden;
+}
+
+body.video{
+    .posts , .post-content{
+        .video{
+            display: flex;
+        }
+        .audio{
+            display: none;
+        }
+        .text{
+            display: none;
+        }
+        
+    }
+}
+body.audio{
+    .posts, .post-content{
+        .video{
+            display: none;
+        }
+        .audio{
+            display: flex;
+        }
+        .text{
+            display: none;
+        }
+        
+    }
+}
+body.text{
+    .posts , .post-content{
+        .video{
+            display: none;
+        }
+        .audio{
+            display: none;
+        }
+        .text{
+            display: flex;
+        }
+        
+    }
+}
+
+.row{
+    padding: 0.5rem 1rem;
+}
+
+footer{
+    justify-content: space-between;
+}
+
+.audio-notes {
+    ul{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    li{
+        display: none;
+        flex-direction: column;
+        time{
+            display: none;
+        }
+    }
+    
+    li.visible{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.video-notes {
+    ul{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    li{
+        display: none;
+        flex-direction: column;
+        time{
+            display: none;
+        }
+    }
+    
+    li.visible{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+span.bullet{
+    height: .5rem;
+    width: .5rem;
+    margin: .5rem;
+    border-radius: 100%;
+    background: red;
+    display: block;
+}
+.post.active, .post-content{
+    span.bullet{
+        background: green;
+    }
+}
+
+.post, .post-content{
+    .title{
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+
+    }
+}
