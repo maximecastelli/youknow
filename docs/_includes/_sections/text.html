@@ -18,7 +18,7 @@
             <ul class="">
                 
                     {% for note in include.notes %}
-                    <li>
+                    <li data-note="{{note.num}}">
                         <h4>{{note.note}}</h4> 
                         <p>{{note.content}}</p>
                     </li>
