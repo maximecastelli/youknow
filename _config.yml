@@ -49,9 +49,34 @@ collections:
     output: true
     permalink: /pages/:name
 
-exclude: ['package.json', 'src' , 'node_modules', 'vendor']
+exclude: ['package.json', 'src' , 'node_modules', 'vendor','docs']
 include: ["posts", "pages"]
 
+jekyll_compose:
+  post_default_front_matter:
+    published: true
+    enable: false
+
+    video:
+      videoID:
+      videoImg: 
+
+    audio:
+      trackID: 
+      trackFile:
+      trackImg: 
+            
+    text: 
+      textID: 
+      textFile: 
+
+    notes:
+      - note: 
+        num: 
+        videoTS: 
+        audioTS: 
+        content: 
+        
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
