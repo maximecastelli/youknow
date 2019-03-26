@@ -53,7 +53,7 @@ footer{
     justify-content: space-between;
 }
 
-.audio-notes {
+.audio-notes , .video-notes, .text-notes{
     ul{
         display: flex;
         flex-direction: column-reverse;
@@ -73,28 +73,6 @@ footer{
     }
 
 }
-
-.video-notes {
-    ul{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    li{
-        display: none;
-        flex-direction: column;
-        time{
-            display: none;
-        }
-    }
-    
-    li.visible{
-        display: flex;
-        flex-direction: column;
-    }
-
-}
-
 
 span.bullet{
     height: .5rem;
@@ -117,4 +95,8 @@ span.bullet{
         align-items: center;
 
     }
+}
+
+span.text-note{
+    background-color:rgba(red,.16);
 }

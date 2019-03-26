@@ -230,7 +230,17 @@ $(document).ready(function() {
                 target.html(textStatus);
              }
         });
+
+        $(document).on('click','.text-note',function(e){
+        
+            var target = $('li[data-note = ' + $(this).data('note') + ']')[0];
+            console.log(target);
+            if(!target.classList.contains('visible'))show(target);
+            else hide(target);
+        });
     });
+    
+    
 }); 
 
 
