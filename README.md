@@ -16,6 +16,12 @@ Then download the project
 ```
 $ git clone https://github.com/maximecastelli/youknow.git
 ```
+Get in
+
+```
+$ cd youknow
+```
+
 Install dependencies
 
 ```
