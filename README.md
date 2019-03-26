@@ -16,6 +16,13 @@ Then download the project
 ```
 $ git clone https://github.com/maximecastelli/youknow.git
 ```
+
+Install Gulp globally (you might need a sudo there)
+
+```
+$ npm install gulp -g
+```
+
 Get in
 
 ```
