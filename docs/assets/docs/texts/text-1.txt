@@ -1,6 +1,6 @@
-La Kranjska koča (Kranjska koča na Ledinah) est un refuge situé en Slovénie dans les Alpes kamniques.
+<span class="text-note" data-note="1">La Kranjska</span> koča (Kranjska koča na Ledinah) est un refuge situé en Slovénie dans les Alpes kamniques.
 
-Le refuge est perché en bordure de la haute terrasse glaciaire nommée Ledine (où Vadine), l'une des deux terrasses en fin de vallée de Ravenska Kočna1.
+Le refuge est perché en bordure de <span class="text-note" data-note="2">la haute terrasse glaciaire</span> nommée Ledine (où Vadine), l'une des deux terrasses en fin de vallée de Ravenska Kočna1.
 Cette terrasse est entourée des versants nord du Dolgi hrbet, du Štruca, et du Skuta, des faces nord-ouest du Kranjska Rinka et du Koroška Rinka (où Križ), ainsi que du versant sud du Ledinski vrh. Du point de vue du randonneur alpin, le refuge offre accès à la Velika Baba, soit par une via ferrata, soit par la voie normale qui part du col Jezersko sedlo, en amont du refuge et vers l'est. Le col de Jezersko permet en outre de continuer vers le col Savinsjko sedlo, à l'est. Une via ferrata mène au Koroška Rinka, et un autre passage du même type permet le passage du refuge Kranjska koča vers le refuge Češka koča, situé sur l'autre haute terrasse en fin de vallée de Ravenska Kočna. Parmi les faces nord à disposition, le Dolgi hrbet est la paroi qui contient le plus de voies d'alpinisme, les ascensions hivernales y étant particulièrement prisées. Le ski estival était possible sur le glacier du Skuta, actuellement en voie de disparition. Le refuge tient son nom de la ville de Kranj, son club alpin l'ayant construit en 1977, à l'endroit d'une ancienne bergerie. Son toit plat permet l'atterrissage d'un hélicoptère.
 
 
@@ -11,4 +11,4 @@ Sommaire
 2.2	Liens externes
 2.3	Notes et références
 Accès
-Le refuge est accessible par deux chemins de randonnée, quelques passages étant protégés par des câbles. Les deux chemins d'accès sont au départ de la station inférieure du téléphérique monte-charge situé en fin de vallée de Ravenska Kočna, elle-même accessible par une route en macadam à partir de la localité de Jezersko (route 210).
+Le refuge est accessible par deux chemins de randonnée, quelques passages étant protégés par des câbles. Les deux chemins d'accès sont au départ de la station inférieure du téléphérique monte-charge situé en fin de vallée de <span class="text-note" data-note="3">Ravenska Kočna</span>, elle-même accessible par une route en macadam à partir de la localité de Jezersko (route 210).
