@@ -36,3 +36,4 @@ $ bundle exec jekyll post "My new post"
 ```
 
 Then edit from your favorite editor.
+Refer to the post template to fill the newly created post.
