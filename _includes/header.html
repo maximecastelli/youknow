@@ -1,9 +1,9 @@
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
     <a 
         class="navbar-brand col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3" 
         href="{{ site.baseurl }}">
-        Youknow
+        <h2>YouKnow</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -13,20 +13,21 @@
         id="navbarNav">
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" onclick="clickMode(this)" data-mode="video">Video</a>
+            <h2><a class="nav-link" onclick="clickMode(this)" data-mode="video">Video</a></h2>
         </li>
         <li class="nav-item">
-            <a class="nav-link" onclick="clickMode(this)" data-mode="audio">Audio</a>
+            <h2><a class="nav-link" onclick="clickMode(this)" data-mode="audio">Audio</a></h2> 
         </li>
         <li class="nav-item">
-            <a class="nav-link" onclick="clickMode(this)" data-mode="text">Text</a>
+            <h2><a class="nav-link" onclick="clickMode(this)" data-mode="text">Text</a></h2> 
         </li>
         
         </ul>
     </div>
+    
     <a class="navbar-brand col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 text-right" 
         href="{{ site.baseurl }}/pages/about.html">
-        ?
+            <h2>?</h2>
     </a>
 </nav>
 </header>

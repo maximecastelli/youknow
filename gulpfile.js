@@ -94,6 +94,16 @@ gulp.task('texts', function() {
 		.pipe(gulp.dest('assets/docs/texts/'));
 });
 
+/*
+ * Pipe fonts
+ */
+gulp.task('fonts', function() {
+	return gulp.src('src/fonts/**/*.{woff,woff2,ttf}')
+		.pipe(plumber())
+		.pipe(gulp.dest('assets/fonts/'));
+});
+
+
 
 /**
  * Compile and minify js
@@ -111,9 +121,7 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
   gulp.watch(['*html','_includes/*html', '_layouts/*.html', 'posts/*html' ], ['jekyll-rebuild']);
-
-
 });
 
 //gulp.task('default', ['js', 'sass', 'browser-sync', 'watch']);
-gulp.task('default', gulp.series('js', 'sass', 'imagemin', 'audio', 'texts','browser-sync', 'watch'));
+gulp.task('default', gulp.series('js', 'fonts', 'sass', 'imagemin', 'audio', 'texts','browser-sync', 'watch'));
