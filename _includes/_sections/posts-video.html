@@ -2,12 +2,13 @@
     {% for post in site.posts %}
     
     <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 {% if post.enable %}active{% endif %}" >
-        
-        {% if post.video.videoImg ==  %}
-        <img src="assets/docs/img/video_placeholder.jpg" class="img-fluid" alt="post img">
-        {% else %}
-        <img src="assets/docs/img/{{ post.video.videoImg }}" class="img-fluid" alt="post img">
-        {% endif %}
+        <a class="img-link" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
+            {% if post.video.videoImg ==  %}
+            <img src="assets/docs/img/video_placeholder.jpg" class="img-fluid" alt="post img">
+            {% else %}
+            <img src="assets/docs/img/{{ post.video.videoImg }}" class="img-fluid" alt="post img">
+            {% endif %}
+        </a>
         <div class="post-bottom">
             <span class="bullet"></span>
             <div>
