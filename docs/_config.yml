@@ -39,7 +39,7 @@ includes:
 plugins:
 #  - jekyll-feed
   - jekyll-sitemap
-#  - github-pages
+  - github-pages
 
 collections:
   posts:
