@@ -13,20 +13,22 @@ function setMode(mode){
     //alert(localStorage.getItem('mode'));
     document.body.classList = "";
     document.body.classList += localStorage.getItem('mode');
-    setActive();
+    //setActive();
 }
 
 var clickMode = function(e){
 
     var m = e.dataset.mode;
-    console.log(m);
+    //console.log(m);
     setMode(m); 
 }
 
 document.body.classList += localStorage.getItem('mode');
-setActive();
+    
 
- function setActive(){
+/*
+function setActive(){
+    console.log('setActive Launched')
     $('a.nav-link').each(function(){
         if($(this).data('mode') == localStorage.getItem('mode')){
             $(this).addClass('active');
@@ -35,7 +37,7 @@ setActive();
         }
     });
 }
-
+*/
 
 // VIDEO PLAYER FUNCTIONS
 

@@ -1,27 +1,20 @@
-<div class="posts-audio audio row">
+<div class="posts-audio audio row ">
     {% for post in site.posts %}
-    <div class="post post-a card {% if post.enable %}active{% endif %}">
+    <div class="post post-a card w-100 {% if post.enable %}active{% endif %}">
         
-        <figure class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">     
-            <img src="assets/docs/img/{{ post.audio.trackImg }}"
+        <figure class="card-body row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">     
+            <span
             class="card-img-top col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
-            style="align-self:baseline;"
-            alt="image for {{ post.audio.trackID }}">
+            style="align-self:baseline; height: auto;"
+            alt="{{ post.audio.trackID }}">
+            </span>
             <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <figcaption>    
                     <span class="audio-play" data-target="{{ post.audio.trackID }}">></span>
                     <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title">
-                        <!--<span class="bullet"></span>  -->
-                        
                         <h3>{{ post.title }}</h3>
                     </a>
                 </figcaption>
-                <!--<audio
-                    controls
-                    src="assets/docs/audio/{{ post.audio.trackFile }}">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>-->
                 <div class="audio-wave" id="{{ post.audio.trackID }}" data-src="assets/docs/audio/{{ post.audio.trackFile }}"></div>
                 <br>
                 <span>Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></span>
@@ -34,13 +27,3 @@
     </div>
     {% endfor %}
 </div> 
-
-<!--
-<div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-    <img src="assets/docs/img/{{ post.video.videoImg }}" class="img-fluid" alt="post img">
-    <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
-        {{ post.title }}
-    </a>
-- <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
-</div>
--->

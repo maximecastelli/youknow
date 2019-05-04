@@ -29,8 +29,9 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 	browserSync.reload();
 });
 */
-gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function () {
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function (done) {
 	browserSync.reload();
+	done();
 }));
 
 /*
@@ -94,6 +95,16 @@ gulp.task('texts', function() {
 		.pipe(gulp.dest('assets/docs/texts/'));
 });
 
+/*
+ * Pipe fonts
+ */
+gulp.task('fonts', function() {
+	return gulp.src('src/fonts/**/*.{woff,woff2,ttf}')
+		.pipe(plumber())
+		.pipe(gulp.dest('assets/fonts/'));
+});
+
+
 
 /**
  * Compile and minify js
@@ -106,14 +117,21 @@ gulp.task('js', function(){
 		.pipe(gulp.dest('assets/js/'))
 });
 
+//gulp.task('watch', function() {
+//  gulp.watch('src/scss/**/*.scss', ['sass']);
+//  gulp.watch('src/js/**/*.js', ['js']);
+//  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+//  gulp.watch(['*html','_includes/*html', '_layouts/*.html', 'posts/*html' ], ['jekyll-rebuild']);
+//});
+
 gulp.task('watch', function() {
-  gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-  gulp.watch(['*html','_includes/*html', '_layouts/*.html', 'posts/*html' ], ['jekyll-rebuild']);
-
-
-});
+	gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], gulp.series('sass', 'jekyll-rebuild'));
+	gulp.watch('src/js/**/*.js', gulp.series('js', 'jekyll-rebuild'));
+	gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series('imagemin', 'jekyll-rebuild'));
+	gulp.watch(['_layouts/*.html','_pages/*.html','_posts/*.html', '_includes/**/*.html'], gulp.series('jekyll-rebuild'));
+  });
 
 //gulp.task('default', ['js', 'sass', 'browser-sync', 'watch']);
-gulp.task('default', gulp.series('js', 'sass', 'imagemin', 'audio', 'texts','browser-sync', 'watch'));
+//gulp.task('default', gulp.series('js', 'fonts', 'sass', 'imagemin', 'audio', 'texts','browser-sync', 'watch'));
+
+gulp.task('default', gulp.series('js', 'fonts', 'imagemin', 'sass', 'audio', 'texts', gulp.parallel('browser-sync', 'watch')));
