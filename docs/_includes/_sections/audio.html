@@ -1,4 +1,4 @@
-<div class="audio audio-{{include.title | downcase}} card ">
+<section class="audio audio-post audio-{{include.slug | downcase}} card ">
     <figure class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">     
         <img src="../assets/docs/img/{{ include.audio.trackImg }}"
          class="card-img-top col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
@@ -10,14 +10,7 @@
                 <span class="bullet"></span>
                 <h2> {{ include.title }}</h2>
             </figcaption>
-            <!--
-            <audio
-                controls
-                src="../assets/docs/audio/{{ include.audio.trackFile }}">
-                    Your browser does not support the
-                    <code>audio</code> element.
-            </audio>
-            -->
+            
             <div class="audio-wave" id="{{ include.audio.trackID }}" data-src="../assets/docs/audio/{{ include.audio.trackFile }}"></div>
             <div class="audio-notes">
 
@@ -34,4 +27,4 @@
         </div>
         
     </figure>
-</div>
+</section>

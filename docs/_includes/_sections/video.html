@@ -1,4 +1,4 @@
-<section class="video video-{{ include.title | downcase }} row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<section class="video video-{{ include.slug | downcase }} row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
     <div id="player" data-id="{{ include.video.videoID }}" class="row col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 offset-md-2">
 
     </div>
@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="video-notes row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <ul class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 offset-md-2">
+            <ul class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 
                 {% for note in include.notes %}
                 <li>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Template Post
+slug: i-assiduous #NO SPACES AND SPECIAL CHARACTERS EXCEPT - OR _
 date: 2019-03-26 07:18 +0100
 published: false
 enable: false

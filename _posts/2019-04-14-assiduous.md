@@ -1,6 +1,7 @@
 ---
 layout: post
-title: I. ASSIDUOUS
+title: "I. ASSIDUOUS"
+slug: i-assiduous
 date: 2019-04-14 12:18 +0100
 published: true
 enable: true
@@ -10,7 +11,7 @@ video:
   videoImg: 
 
 audio:
-  trackID: Track
+  trackID: assiduous
   trackFile: "I.ASSIDUOUS.wav"
   trackImg: img.png
         
