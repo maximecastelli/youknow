@@ -180,7 +180,7 @@ $('.audio-post .audio-wave').each(function(i){
     waves.push(wave);
 });
 
-$('.audio-play').each(function(i){
+$('.audio-play i').each(function(i){
     $(this).click(function(){
         waves[i].playPause();
         //wave[i].on('play', pauseAll(i, waves));
