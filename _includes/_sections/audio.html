@@ -12,13 +12,13 @@
             </figcaption>
             
             <div class="audio-wave" id="{{ include.audio.trackID }}" data-src="../assets/docs/audio/{{ include.audio.trackFile }}"></div>
-            <div class="audio-notes">
+            <div class="audio-notes notes">
 
                 <ul>
                     {% for note in include.notes %}
-                    <li>
-                        <h4>{{note.num}} - {{note.note}}</h4> 
-                        <p>{{note.content}}</p>
+                    <li class="note">
+                        <h4 class="note-num">{{note.num}} - {{note.note}}</h4> 
+                        <p class="note-content">{{note.content}}</p>
                         <time>{{note.audioTS}}</time>
                     </li>
                     {% endfor %}
