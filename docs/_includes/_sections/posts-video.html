@@ -1,8 +1,8 @@
 <div class="posts-video video row">
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
     
     <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 {% if post.enable %}active{% endif %}" >
-        <a class="img-link" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
+            <a class="img-link {% if post.enable != true %}disable{% endif %}" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
             {% if post.video.videoImg ==  %}
             <img src="assets/docs/img/video_placeholder.jpg" class="img-fluid" alt="post img">
             {% else %}
@@ -12,11 +12,18 @@
         <div class="post-bottom">
             <span class="bullet"></span>
             <div>
-                <a class="title" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
+                <a class="title {% if post.enable != true %}disable{% endif %}" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
                 
                     <h2>{{ post.title }}</h2>
                 </a>
-            <span>Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></span> 
+                <span>
+                    {% if post.enable %}    
+                        Posted on 
+                    {% else %}
+                        Release on 
+                    {% endif %}
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
+                </span> 
             </div>
         </div>
         

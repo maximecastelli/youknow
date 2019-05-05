@@ -11,6 +11,9 @@
             <h3 style="text-align: right;">12</h3>
         </div>
     </div>
+    <span class="col-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 offset-md-2">
+            Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ include.date | date_to_long_string }}</time>
+    </span> 
     <div class="video-notes notes row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <ul class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 

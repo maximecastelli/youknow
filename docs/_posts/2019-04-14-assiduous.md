@@ -2,7 +2,8 @@
 layout: post
 title: "I. ASSIDUOUS"
 slug: i-assiduous
-date: 2019-04-14 12:18 +0100
+date: 2019-05-05 12:18 +0100
+release: 2019-05-06 12:18 +0100
 published: true
 enable: true
 
@@ -87,6 +88,3 @@ notes:
     content: "People.xiph.org. (2018). RNNoise: Learning Noise Suppression. [online] Available at&#58; https://people.xiph.org/~jm/demo/rnnoise/ [Accessed 3 Oct. 2018]."
 
 ---
-
-
-qwertzu

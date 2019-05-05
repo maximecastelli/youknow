@@ -1,24 +1,36 @@
 <div class="posts-audio audio row ">
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
     <div class="post post-a card w-100 {% if post.enable %}active{% endif %}">
         
         <figure class="card-body row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">     
-            <span
+            <img
+            {% if post.enable %}    
+                src="assets/docs/img/green.jpg" 
+            {% else %}
+                src="assets/docs/img/red.jpg"
+            {% endif %}
             class="card-img-top col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
             style="align-self:baseline; height: auto;"
-            alt="{{ post.audio.trackID }}">
-            </span>
+            alt="{{ post.audio.trackID }}"
+            />
             <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <figcaption>    
                     <span class="audio-play" data-target="{{ post.audio.trackID }}">></span>
-                    <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title">
-                        <h3>{{ post.title }}</h3>
+                    <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title {% if post.enable != true %}disable{% endif %}">
+                        <h1>{{ post.title }}</h1>
                     </a>
                 </figcaption>
                 <div class="audio-wave" id="{{ post.audio.trackID }}" data-src="assets/docs/audio/{{ post.audio.trackFile }}"></div>
-                <br>
-                <span>Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></span>
-                <br>
+                
+                <span>
+                        {% if post.enable %}    
+                            Posted on 
+                        {% else %}
+                            Release on 
+                        {% endif %}
+                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
+                </span> 
+                
                 <p>{{post.content}}</p>
             </div> 
             

@@ -244,6 +244,23 @@ $(document).ready(function() {
         });
     });
     
+    $(".note-content").each(function(e){
+        var c = $(this).html();
+        var url = c.split('http');
+        url = url[1].split(' ');
+        url = 'http' + url[0];
+        // wrap it now
+        var oc = c.split(url);
+        var nc =  oc[0];
+            nc += '<a href="'+url+'" target="_blank" class="note-link">'+ url+'<a>';
+            nc += oc[1];
+        
+        $(this).html(nc);
+
+        console.log('link wrapped'); 
+
+    });
+
     
 }); 
 
