@@ -14,6 +14,7 @@ function setMode(mode){
     document.body.classList = "";
     document.body.classList += localStorage.getItem('mode');
     //setActive();
+    
 }
 
 var clickMode = function(e){
@@ -21,6 +22,7 @@ var clickMode = function(e){
     var m = e.dataset.mode;
     //console.log(m);
     setMode(m); 
+    stopAll();
 }
 
 document.body.classList += localStorage.getItem('mode');
@@ -112,6 +114,7 @@ function onPlayerStateChange(event) {
 function stopVideo() {
 player.stopVideo();
 }
+
 
 // when the time changes, this will be called.
 function onProgress(currentTime) {
@@ -247,8 +250,16 @@ $(document).ready(function() {
 
 //UTILITIES
 
+function stopAll(){
+    player.stopVideo();
+    for(var i=0; i<waves.length;i++){
+        waves[i].stop();
+    }
+
+}
+
 var show = function(e){
-    if(!e.classList.contains("visible")) e.classList += "visible"; 
+    if(!e.classList.contains("visible")) e.classList += " visible"; 
 }
 
 var hide = function(e){
