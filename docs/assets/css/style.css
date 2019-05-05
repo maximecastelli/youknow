@@ -65,14 +65,12 @@ footer {
   flex-direction: column-reverse; }
 
 .audio-notes li, .video-notes li, .text-notes li {
-  display: none;
-  flex-direction: column; }
+  display: none; }
   .audio-notes li time, .video-notes li time, .text-notes li time {
     display: none; }
 
 .audio-notes li.visible, .video-notes li.visible, .text-notes li.visible {
-  display: flex;
-  flex-direction: column; }
+  display: flex; }
 
 span.bullet {
   height: 1rem;
@@ -106,6 +104,14 @@ span.bullet {
 span.text-note {
   background-color: rgba(255, 0, 0, 0.16); }
 
+.notes li {
+  font-size: 1.5rem;
+  flex-direction: row-reverse;
+  align-items: flex-start; }
+  .notes li .note-num {
+    font-size: 1rem;
+    margin-right: .5rem; }
+
 section.text .text-column, section.text .text-notes {
   height: 70vh;
   overflow-y: scroll;
@@ -136,4 +142,5 @@ footer.footer {
 .video-notes {
   overflow-y: scroll;
   height: 25vh;
-  direction: rtl; }
+  direction: rtl;
+  margin: .5rem; }

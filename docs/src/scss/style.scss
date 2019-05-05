@@ -117,7 +117,7 @@ footer{
     
     li{
         display: none;
-        flex-direction: column;
+        //flex-direction: column;
         time{
             display: none;
         }
@@ -125,7 +125,7 @@ footer{
     
     li.visible{
         display: flex;
-        flex-direction: column;
+        //flex-direction: column;
     }
 
 }
@@ -169,6 +169,24 @@ span.bullet{
 
 span.text-note{
     background-color:rgba(map-get($colors, primary),.16);
+}
+
+.notes{
+    li{
+        font-size: 1.5rem;
+        //display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .note-num{
+            font-size: 1rem;
+            margin-right: .5rem;
+        }
+        .note-content{
+
+        }
+    }
+    
+    
 }
 
 
@@ -217,4 +235,5 @@ footer.footer{
     overflow-y: scroll;
     height: 25vh;
     direction: rtl;
+    margin: .5rem;
 }

@@ -14,13 +14,13 @@
         <div class="text-column col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" data-src="../assets/docs/texts/{{ include.text.textFile }}">
             <p class="text-holder"></p>
         </div>
-        <div class="text-notes col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="text-notes notes col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <ul class="">
                 
                     {% for note in include.notes %}
-                    <li data-note="{{note.num}}">
-                        <h4>{{note.note}}</h4> 
-                        <p>{{note.content}}</p>
+                    <li class="note" data-note="{{note.num}}">
+                        <h4 class="note-num">{{note.num}}</h4> 
+                        <p class="note-content">{{note.content}}</p>
                     </li>
                     {% endfor %}
                 </ul>
