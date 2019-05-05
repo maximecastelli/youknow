@@ -1,5 +1,6 @@
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 2rem; }
 
 body.video .navbar-nav a.nav-link[data-mode="video"] {
   border-bottom: #000 solid 1px; }
@@ -106,19 +107,33 @@ span.text-note {
   background-color: rgba(255, 0, 0, 0.16); }
 
 section.text .text-column, section.text .text-notes {
-  height: 50vh;
+  height: 70vh;
   overflow-y: scroll;
   overflow-x: hidden; }
   section.text .text-column ul, section.text .text-notes ul {
     margin-left: 0;
     padding-left: 0; }
 
-section.text .text-column::-webkit-scrollbar-track, section.text .text-notes::-webkit-scrollbar-track {
-  background-color: #fff;
-  border-right: solid 1px #ff0000; }
+section.text .text-notes {
+  direction: rtl; }
 
-section.text .text-column::-webkit-scrollbar, section.text .text-notes::-webkit-scrollbar {
+*::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-left: solid 1px #ff0000; }
+
+section.text .text-column::-webkit-scrollbar-track {
+  border-left: none; }
+
+*::-webkit-scrollbar {
   width: 10px; }
 
-section.text .text-column::-webkit-scrollbar-thumb, section.text .text-notes::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #ff0000; }
+
+footer.footer {
+  display: none; }
+
+.video-notes {
+  overflow-y: scroll;
+  height: 25vh;
+  direction: rtl; }

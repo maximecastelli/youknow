@@ -148,7 +148,7 @@ $('.posts-audio .audio-wave').each(function(i){
 });
 
 $('.audio-post .audio-wave').each(function(i){
-    //console.log('Wave');
+    console.log('Wave');
     var trackID = $(this).attr('id');
     var src = $(this).data('src');
     var wave = createWave(trackID, src); 
@@ -156,6 +156,7 @@ $('.audio-post .audio-wave').each(function(i){
     //wave.on('play', pauseAll(i, waves)); 
     wave.on('ready', function () {
         createRegions($('.audio-notes li'), 3, wave);
+        console.log('Region');
     });
 
     wave.on('region-in', function(region) {
@@ -173,8 +174,6 @@ $('.audio-post .audio-wave').each(function(i){
             hide(ans[rIndex]);
         });
     });
-
-    
     waves.push(wave);
 });
 
@@ -274,48 +273,3 @@ function hasClass(ele,cls) {
     }
   }
   
-
-
-
-
-
-
-
-// ON LAISSE TOMBER SOUNDCLOUD TROP DE COMPLICATIONS POUR QUE DALLE
-// recuperation des infos SC
-
-
-//var url = "https://cors-anywhere.herokuapp.com/https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/409954680";
-/*
-var url = "https://cors-anywhere.herokuapp.com/https://soundcloud.com/feelmybicep/bicep-opal-four-tet-remix";
-
-var request = new XMLHttpRequest();
-
-
-
-request.open('GET', url, true);
-
-request.onload = function() {
-  if (request.status >= 200 && request.status < 400) {
-    // Success!
-    console.log('success');
-    //var data = JSON.parse(request.responseText);
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "text/html");
-    //console.log(doc.querySelector("div.commentsList").innerHTML);
-    console.log(request.responseText);
-
-  } else {
-    // We reached our target server, but it returned an error
-    console.log('nup:'+ request.status);
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-  console.log('supernup');
-};
-
-request.send();
-*/

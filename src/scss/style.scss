@@ -6,6 +6,7 @@ $colors: (
 
 body{
     overflow-x: hidden;
+    font-size: 2rem;
 }
 
 body.video{
@@ -170,8 +171,9 @@ span.text-note{
     background-color:rgba(map-get($colors, primary),.16);
 }
 
+
 section.text .text-column, section.text .text-notes{
-    height: 50vh;
+    height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
     ul{
@@ -180,22 +182,39 @@ section.text .text-column, section.text .text-notes{
     } 
 }
 
-
-section.text .text-column::-webkit-scrollbar-track, section.text .text-notes::-webkit-scrollbar-track
+section.text .text-notes{
+    direction: rtl;
+}
+*::-webkit-scrollbar-track
 {
 	//-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #fff;
-    border-right: solid 1px #ff0000;
+    border-left: solid 1px #ff0000;
 }
 
-section.text .text-column::-webkit-scrollbar, section.text .text-notes::-webkit-scrollbar
+section.text .text-column::-webkit-scrollbar-track
+{
+    border-left: none;
+}
+
+*::-webkit-scrollbar
 {
 	width: 10px;
 	
 }
 
-section.text .text-column::-webkit-scrollbar-thumb, section.text .text-notes::-webkit-scrollbar-thumb
+
+*::-webkit-scrollbar-thumb
 {
 	background-color: #ff0000;
 
+}
+
+footer.footer{
+    display: none;
+}
+.video-notes {
+    overflow-y: scroll;
+    height: 25vh;
+    direction: rtl;
 }
