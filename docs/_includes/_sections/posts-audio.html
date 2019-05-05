@@ -15,7 +15,7 @@
             />
             <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <figcaption>    
-                    <span class="audio-play" data-target="{{ post.audio.trackID }}">></span>
+                    <span class="audio-play" data-target="{{ post.audio.trackID }}"><i class="material-icons">play_arrow</i></span>
                     <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title {% if post.enable != true %}disable{% endif %}">
                         <h1>{{ post.title }}</h1>
                     </a>

@@ -6196,7 +6196,11 @@ span.text-note {
 
 .audio-play .material-icons {
   font-size: 4rem;
-  margin: .5rem; }
+  margin: .5rem;
+  cursor: pointer; }
+
+.audio figcaption {
+  display: flex; }
 
 section.text .text-column, section.text .text-notes {
   height: 70vh;
