@@ -9,7 +9,7 @@ enable: true
 
 video:
   videoID: 0MtwBaDdyC0
-  videoImg: 
+  videoImg: assiduous.jpg
 
 audio:
   trackID: assiduous
