@@ -183,9 +183,13 @@ $('.audio-post .audio-wave').each(function(i){
 $('.audio-play i').each(function(i){
     $(this).click(function(){
         waves[i].playPause();
+        $(this).toggleClass('playing');
+        if($(this).hasClass('playing'))$(this).html('pause');
+        else $(this).html('play_arrow');
         //wave[i].on('play', pauseAll(i, waves));
     });
 });
+
 
 function createWave(trackID, src){
     var wave = WaveSurfer.create({

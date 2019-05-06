@@ -20,8 +20,9 @@
                         <h1>{{ post.title }}</h1>
                     </a>
                 </figcaption>
+                {% if post.enable %}    
                 <div class="audio-wave" id="{{ post.audio.trackID }}" data-src="assets/docs/audio/{{ post.audio.trackFile }}"></div>
-                
+                {% endif %} 
                 <span>
                         {% if post.enable %}    
                             Posted on 
