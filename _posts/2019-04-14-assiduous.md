@@ -18,7 +18,7 @@ audio:
         
 text: 
   textID: "I.ASSIDUOUS"
-  textFile: text-1.txt
+  textFile: 2019-04-14-assiduous.txt
 
 notes:
   - note: "1"
