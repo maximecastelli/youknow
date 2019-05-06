@@ -273,8 +273,11 @@ $(document).ready(function() {
 
 function stopAll(){
     player.stopVideo();
-    for(var i=0; i<waves.length;i++){
-        waves[i].stop();
+    if($('.audio-play i').hasClass('playing')){
+       waves[0].stop();
+       $('.audio-play i').removeClass('playing');
+       $('.audio-play i').html('play_arrow');
+
     }
 
 }
