@@ -22,7 +22,7 @@
                     {% else %}
                         Release on 
                     {% endif %}
-                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m.%Y' }}</time>
                 </span> 
             </div>
         </div>
