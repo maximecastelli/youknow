@@ -11,7 +11,7 @@
                 <h1> {{ include.title }}</h1>
             </figcaption>
             <span>
-                Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ include.date | date_to_long_string }}</time>
+                Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%d.%m.%Y' }}</time>
             </span> 
             <div class="audio-wave" id="{{ include.audio.trackID }}" data-src="../assets/docs/audio/{{ include.audio.trackFile }}"></div>
             <div class="audio-notes notes">
