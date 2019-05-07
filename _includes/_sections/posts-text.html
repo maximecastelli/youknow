@@ -12,7 +12,7 @@
             {% else %}
                 Release on 
             {% endif %}
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+            <time datetime="{{ post.release | date: '%Y-%m-%d' }}">{{ post.release | date: '%d.%m.%Y' }}</time>
         </span> 
     </div>
 {% endfor %}

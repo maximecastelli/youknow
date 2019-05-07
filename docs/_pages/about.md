@@ -2,7 +2,25 @@
 layout: about
 ---
 
+<i>A collection of video/text/audio essays layed out as a series of eight articles written during Thomas Grogan’s residency at FACT Liverpool & the BBC in Salford and London. His residency took place in mid-2018 and was part of The Future World of Work programme.</i>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus, augue vitae finibus sagittis, risus purus maximus risus, a porttitor leo mauris eu sapien. Maecenas aliquet lacus diam, ac mattis turpis hendrerit ac. Sed scelerisque, velit convallis sagittis aliquam, eros tortor eleifend neque, eu dapibus felis lorem vel augue. Phasellus volutpat risus in ipsum mollis mattis. Vestibulum efficitur interdum elit vitae vulputate. Sed rhoncus erat faucibus arcu ornare, ac vulputate dui venenatis. In ac suscipit metus, ac tristique quam. Cras sed rhoncus diam.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur maximus nulla ut dapibus semper. Proin fermentum lobortis arcu, id facilisis sapien tincidunt nec. Duis mollis ut dui sed bibendum. Ut egestas, nulla non vestibulum ullamcorper, felis tellus condimentum metus, sit amet semper lacus turpis fringilla urna. In ultrices ipsum eu interdum condimentum. Pellentesque porta velit eget imperdiet semper. Praesent in mi dapibus, mollis purus ut, ullamcorper augue. In egestas eget ligula quis pretium.
+Abstract:  
+
+By looking at BBC journalists workflows, BBC R&D experiments and real world events, this research aims to evaluate the impact of automation and Artificial Intelligence in the construction and consumption of news items. In the first part of this research, we have collected evidence of a shift in journalistic labour to then, in a second part, speculate on the future of journalism.
+As for today, we believe that the two processes of construction and consumption of news are centred around the human being seen as a universal ‘subject’ and ‘the public’ as a collection of these conflicting subjectivities. However, in the process of our research, we have aimed to re-define to some extent the audience and producers of news as a series of participatory objects which are made more fungible and interchangeable with each other via the dynamics of AI systems.
+Through this research, we have been looking more particularly at the scenario of AI platforms automating news entirely by organising, editing and broadcasting content. In this projection, we believe that the decrease in size and cost of electronic news gathering (ENG) equipment and the increase of digital computing forces will enable the traditional tasks of journalists and editors to be re-distributed to a larger, less skilled and more dispersed group. - Paul & Thomas
+
+
+Credits:
+
+Co-writer - Paul van Herk
+Web Progamer - Maxime Castelli
+Web Designer - Lauren Budestschu
+Sound Designer - Loic Notaroberto
+
+
+Contact:
+
+<a href="http://thomas-grogan.com/">www.thomas-grogan.com</a>
+<a href="mailto:contact@thomas-grogan.com">contact[at]thomas-grogan.com</a>
