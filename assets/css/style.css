@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
-  font-size: 2rem; }
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif; }
 
 body.video .navbar-nav a.nav-link[data-mode="video"] {
   border-bottom: #000 solid 1px; }
@@ -102,13 +103,29 @@ span.bullet {
 .posts .post {
   margin: 1rem 0; }
 
-span.text-note {
-  background-color: rgba(255, 0, 0, 0.16); }
+.posts .posts-text .post {
+  margin: 0; }
+
+.posts .posts-text .post.active {
+  margin: 1rem 0 4rem 0; }
+
+span.text-note .note-switch {
+  color: blue;
+  position: relative;
+  bottom: 1px;
+  font-size: .8em;
+  line-height: .8em;
+  vertical-align: super;
+  text-decoration: none; }
 
 .notes {
   overflow-y: scroll;
   height: 25vh;
   direction: rtl; }
+  .notes .note-list {
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: flex-end; }
   .notes li {
     font-size: 1.5rem;
     flex-direction: row-reverse;
@@ -116,9 +133,11 @@ span.text-note {
     .notes li .note-num {
       font-size: 1rem;
       margin-right: .5rem; }
-    .notes li .note-content .note-link {
-      color: blue;
-      text-decoration: underline; }
+    .notes li .note-content {
+      direction: ltr; }
+      .notes li .note-content .note-link {
+        color: blue;
+        text-decoration: underline; }
 
 .video-notes {
   margin: .5rem; }

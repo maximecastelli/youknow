@@ -15,10 +15,10 @@
             <p class="text-holder"></p>
         </div>
         <div class="text-notes notes col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <ul class="">
+            <ul class="note-list">
                 
                     {% for note in include.notes %}
-                    <li class="note" data-note="{{note.num}}">
+                    <li class="note" data-note="{{note.num}}" data-i="0">
                         <h4 class="note-num">{{note.num}}</h4> 
                         <p class="note-content">{{note.content}}</p>
                     </li>
