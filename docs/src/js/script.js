@@ -220,7 +220,7 @@ function createRegions(arr, nLength, ws){
 
 
 // GRAB AND INSERT TEXTS FROM .txt FILES
-
+var nbuffer = [];
 
 $(document).ready(function() {
     //
@@ -233,31 +233,30 @@ $(document).ready(function() {
             dataType: "text",
             success : function (data) {
                 target.html(data);
+                
+                $('.text-note').each(function(){
+                    $(this).append('<span class="note-switch"> ['+ $(this).data('note') +'] </span>')
+                });
+
             },
             fail: function(xhr, textStatus, errorThrown){
                 target.html(textStatus);
              }
         });
-
-        $(document).on('click','.text-note',function(e){
         
-            var target = $('li[data-note = ' + $(this).data('note') + ']')[0];
-            console.log(target);
-            if(!target.classList.contains('visible'))show(target);
-            else hide(target);
-        });
     });
     
+
     $(".note-content").each(function(e){
         var c = $(this).html();
         var url = c.split('http');
         url = url[1].split(' ');
-        url = 'http' + url[0];
+        var u = 'http' + url[0];
         // wrap it now
-        var oc = c.split(url);
+        var oc = c.split(u);
         var nc =  oc[0];
-            nc += '<a href="'+url+'" target="_blank" class="note-link">'+ url+'<a>';
-            nc += oc[1];
+            nc += '<a href="'+u+'" target="_blank" class="note-link">'+ u+'</a>';
+            nc += '<p>' + oc[1]+ '</p>';
         
         $(this).html(nc);
 
@@ -266,6 +265,30 @@ $(document).ready(function() {
     });
 
     
+
+    
+        $(document).on('click','.note-switch',function(e){
+        
+            var target = $('li[data-note = ' + $(this).parent().data('note') + ']')[0];
+            
+           
+            console.log(target);
+            //console.log(nbuffer);
+            if(!target.classList.contains('visible')){
+                show(target);
+                $(target).attr('data-i', nbuffer.length+1);
+                nbuffer.push(target);
+                console.log('push : '+nbuffer);
+            }
+            else {
+                hide(target);
+                nbuffer.splice($(target).data('i')-1,1);
+                console.log('splice : '+ nbuffer);
+                $(target).data('i', 0);
+
+            }
+            reorder('.note-list');
+        });
 }); 
 
 
@@ -308,3 +331,15 @@ function hasClass(ele,cls) {
     }
   }
   
+// JQERY FUNCTION TO REORDER LIST
+function reorder(list) {
+    
+    var order = $(list).find('.visible').detach().sort(function(a,b) {
+        
+      var classA = $(a).data('i');
+      var classB = $(b).data('i');
+      console.log('reordering' + classA + " vs " + classB);
+      return classB < classA;
+    });
+    $(list).append( order );
+}
