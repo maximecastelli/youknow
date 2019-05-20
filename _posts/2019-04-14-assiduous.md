@@ -13,7 +13,7 @@ video:
 
 audio:
   trackID: assiduous
-  trackFile: "I.ASSIDUOUS.mp3"
+  trackFile: "I-ASSIDUOUS.mp3"
   trackImg: img.png
         
 text: 

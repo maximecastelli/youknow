@@ -55,6 +55,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var vid = document.getElementById('player');
 console.log(vid);
 if(vid !== null)var videoId = vid.dataset.id;
+
+var vWidth = document.getElementById('player').offsetWidth;
+var vHeight = Math.round((vWidth / 16)*9);
+
 var videotime = 0;
 var timeupdater = null;
 var vindex = 0;
@@ -73,8 +77,8 @@ var player;
 function onYouTubeIframeAPIReady() {
 //console.log(videoId);
 player = new YT.Player('player', {
-    height: '850',
-    width: '1280',
+    height: vHeight,
+    width: vWidth,
     videoId: videoId,
     events: {
     'onReady': onPlayerReady,
