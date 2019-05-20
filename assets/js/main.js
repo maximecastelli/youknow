@@ -254,6 +254,7 @@ $(document).ready(function() {
     $(".note-content").each(function(e){
         var c = $(this).html();
         var url = c.split('http');
+        if(url.length<2) return;
         url = url[1].split(' ');
         var u = 'http' + url[0];
         // wrap it now
