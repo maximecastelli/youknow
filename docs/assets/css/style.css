@@ -2,9 +2,18 @@ body {
   overflow-x: hidden;
   font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif; }
+  body .about-link {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center; }
+  body .about .about-link {
+    border: #000 solid 2px;
+    border-radius: 50%;
+    margin: -.75rem 0 0 -1rem; }
 
-body.video .navbar-nav a.nav-link[data-mode="video"] {
-  border-bottom: #000 solid 1px; }
+body.video .navbar-nav:not(.about) a.nav-link[data-mode="video"] {
+  border-bottom: #000 solid 2px; }
 
 body.video .posts .video, body.video .post-content .video {
   display: flex; }
@@ -15,8 +24,8 @@ body.video .posts .audio, body.video .post-content .audio {
 body.video .posts .text, body.video .post-content .text {
   display: none; }
 
-body.audio .navbar-nav a.nav-link[data-mode="audio"] {
-  border-bottom: #000 solid 1px; }
+body.audio .navbar-nav:not(.about) a.nav-link[data-mode="audio"] {
+  border-bottom: #000 solid 2px; }
 
 body.audio .posts .video, body.audio .post-content .video {
   display: none; }
@@ -27,8 +36,8 @@ body.audio .posts .audio, body.audio .post-content .audio {
 body.audio .posts .text, body.audio .post-content .text {
   display: none; }
 
-body.text .navbar-nav a.nav-link[data-mode="text"] {
-  border-bottom: #000 solid 1px; }
+body.text .navbar-nav:not(.about) a.nav-link[data-mode="text"] {
+  border-bottom: #000 solid 2px; }
 
 body.text .posts .video, body.text .post-content .video {
   display: none; }
@@ -78,6 +87,10 @@ footer {
 
 .audio-notes li.visible, .video-notes li.visible, .text-notes li.visible {
   display: flex; }
+
+img.icon {
+  height: 1.25rem;
+  width: auto; }
 
 span.bullet {
   height: 1rem;
@@ -165,9 +178,25 @@ section.text .text-column, section.text .text-notes {
     margin-left: 0;
     padding-left: 0; }
 
+.about-content {
+  height: 85vh;
+  overflow-y: scroll;
+  direction: rtl;
+  margin: 0 1rem; }
+  .about-content p {
+    direction: ltr; }
+
+.posts-audio, .posts-text {
+  height: 85vh;
+  overflow-y: scroll;
+  direction: rtl;
+  margin: 0 1rem; }
+  .posts-audio div, .posts-text div {
+    direction: ltr; }
+
 body *::-webkit-scrollbar-track {
   background-color: #fff;
-  border-left: solid 1px #ff0000; }
+  border-left: solid 2px #ff0000; }
 
 section.text .text-column::-webkit-scrollbar-track {
   border-left: none; }
