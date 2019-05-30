@@ -162,7 +162,7 @@ $('.audio-post .audio-wave').each(function(i){
 
     //wave.on('play', pauseAll(i, waves)); 
     wave.on('ready', function () {
-        createRegions($('.audio-notes li'), 3, wave);
+        createRegions($('.audio-notes li'), 300, wave);
         console.log('Region');
     });
 

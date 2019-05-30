@@ -1,16 +1,18 @@
 body {
   overflow-x: hidden;
-  font-size: 2rem;
+  font-size: 15px;
   font-family: Arial, Helvetica, sans-serif; }
   body .about-link {
-    height: 3rem;
-    width: 3rem;
+    height: 2.4rem;
+    width: 2.4rem;
     display: flex;
     justify-content: center; }
+    body .about-link h2 {
+      line-height: 1.7rem; }
   body .about .about-link {
     border: #000 solid 2px;
     border-radius: 50%;
-    margin: -.75rem 0 0 -1rem; }
+    margin: -.75rem 0 0 0; }
 
 body.video .navbar-nav:not(.about) a.nav-link[data-mode="video"] {
   border-bottom: #000 solid 2px; }
@@ -48,6 +50,14 @@ body.text .posts .audio, body.text .post-content .audio {
 body.text .posts .text, body.text .post-content .text {
   display: flex; }
 
+h1 {
+  font-size: 27px;
+  margin-bottom: 0; }
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 0; }
+
 a {
   color: black; }
 
@@ -65,10 +75,12 @@ a.disable {
   margin-bottom: 7.5vh; }
   .navbar-custom .bg-custom {
     background-color: white; }
+  .navbar-custom .brand {
+    margin-left: 1rem; }
   .navbar-custom .navbar-nav li h2 {
     cursor: pointer; }
-    .navbar-custom .navbar-nav li h2 a.active {
-      /*color:black;*/ }
+    .navbar-custom .navbar-nav li h2 a {
+      height: 3rem; }
 
 .row {
   padding: 0.5rem 1rem; }
@@ -95,7 +107,7 @@ img.icon {
 span.bullet {
   height: 1rem;
   width: 1rem;
-  margin: .5rem .25rem;
+  margin: .5rem 1rem .5rem 0;
   border-radius: 100%;
   background: #ff0000;
   display: block; }
@@ -114,7 +126,7 @@ span.bullet {
   display: flex; }
 
 .posts .post {
-  margin: 1rem 0; }
+  margin: 2rem 0; }
 
 .posts .posts-text .post {
   margin: 0; }
@@ -186,13 +198,18 @@ section.text .text-column, section.text .text-notes {
   .about-content p {
     direction: ltr; }
 
-.posts-audio, .posts-text {
+.posts {
   height: 85vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   direction: rtl;
   margin: 0 1rem; }
-  .posts-audio div, .posts-text div {
+  .posts div {
+    margin-top: 0;
+    padding-top: 0;
     direction: ltr; }
+    .posts div .post {
+      margin-top: 0; }
 
 body *::-webkit-scrollbar-track {
   background-color: #fff;
