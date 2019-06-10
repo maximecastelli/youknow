@@ -229,8 +229,6 @@ var nbuffer = [];
 $(document).ready(function() {
     //
     //
-    console.log("ppppp");
-    console.log($(".posts-text > .active"));
     //SEPARATOR 
     $(".posts-text > .active").last().after('<span class="post-separator"></span>');
     
