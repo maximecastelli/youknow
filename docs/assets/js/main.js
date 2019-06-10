@@ -51,27 +51,27 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // Grab Video ID
-
 var vid = document.getElementById('player');
 console.log(vid);
-if(vid !== null)var videoId = vid.dataset.id;
+if(vid !== null){
+    var videoId = vid.dataset.id;
 
-var vWidth = document.getElementById('player').offsetWidth;
-var vHeight = Math.round((vWidth / 16)*9);
+    var vWidth = document.getElementById('player').offsetWidth;
+    var vHeight = Math.round((vWidth / 16)*9);
 
-var videotime = 0;
-var timeupdater = null;
-var vindex = 0;
+    var videotime = 0;
+    var timeupdater = null;
+    var vindex = 0;
 
-var vts = Array.prototype.slice.call(document.querySelectorAll('.video-notes time'));
-var vns = document.querySelectorAll('.video-notes li');
+    var vts = Array.prototype.slice.call(document.querySelectorAll('.video-notes time'));
+    var vns = document.querySelectorAll('.video-notes li');
 
-for (var i=0; i<vts.length; i++){
-    vts[i]= vts[i].innerHTML;
-}
-console.log(vts);
+    for (var i=0; i<vts.length; i++){
+        vts[i]= vts[i].innerHTML;
+    }
+    console.log(vts);
 //
-
+}
 // Create player
 var player;
 function onYouTubeIframeAPIReady() {
@@ -229,6 +229,12 @@ var nbuffer = [];
 $(document).ready(function() {
     //
     //
+    console.log("ppppp");
+    console.log($(".posts-text > .active"));
+    //SEPARATOR 
+    $(".posts-text > .active").last().after('<span class="post-separator"></span>');
+    
+    //
     $("p.text-holder").each(function(){
         console.log($(this).parent().data('src'));
         var target = $(this);
@@ -269,31 +275,29 @@ $(document).ready(function() {
 
     });
 
+    $(document).on('click','.note-switch',function(e){
     
-
-    
-        $(document).on('click','.note-switch',function(e){
+        var target = $('li[data-note = ' + $(this).parent().data('note') + ']')[0];
         
-            var target = $('li[data-note = ' + $(this).parent().data('note') + ']')[0];
-            
-           
-            console.log(target);
-            //console.log(nbuffer);
-            if(!target.classList.contains('visible')){
-                show(target);
-                $(target).attr('data-i', nbuffer.length+1);
-                nbuffer.push(target);
-                console.log('push : '+nbuffer);
-            }
-            else {
-                hide(target);
-                nbuffer.splice($(target).data('i')-1,1);
-                console.log('splice : '+ nbuffer);
-                $(target).data('i', 0);
+        
+        console.log(target);
+        //console.log(nbuffer);
+        if(!target.classList.contains('visible')){
+            show(target);
+            $(target).attr('data-i', nbuffer.length+1);
+            nbuffer.push(target);
+            console.log('push : '+nbuffer);
+        }
+        else {
+            hide(target);
+            nbuffer.splice($(target).data('i')-1,1);
+            console.log('splice : '+ nbuffer);
+            $(target).data('i', 0);
 
-            }
-            reorder('.note-list');
-        });
+        }
+        reorder('.note-list');
+    });
+
 }); 
 
 
