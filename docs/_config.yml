@@ -21,8 +21,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://youknow.network" # the base hostname & protocol for your site, e.g. http://example.com
-#baseurl: "/youknow"
-#url: "https://maximecastelli.github.io"
 username: Thomas Grogan
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -37,7 +35,6 @@ includes:
 #markdown: kramdown
 #theme: minima
 plugins:
-#  - jekyll-feed
   - jekyll-sitemap
   - github-pages
 
