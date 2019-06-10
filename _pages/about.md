@@ -25,3 +25,8 @@ Contact:<br>
 <a href="http://thomas-grogan.com/">www.thomas-grogan.com</a><br>
 <a href="mailto:contact@thomas-grogan.com">contact[at]thomas-grogan.com</a>
 <br>
+<br>
+Supported by:<br>
+<img src="{{ '/assets/docs/img/' | prepend: site.baseurl }}bbc_logo.png"/>
+<br>
+<img src="{{ '/assets/docs/img/' | prepend: site.baseurl }}fact_logo.png"/>
