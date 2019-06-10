@@ -9,7 +9,7 @@ enable: true
 
 video:
   videoID: 0MtwBaDdyC0
-  videoImg: honest.jpg
+  videoImg: cooperative.jpg
 
 audio:
   trackID: Track3
