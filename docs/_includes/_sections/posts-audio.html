@@ -1,7 +1,7 @@
 <div class="posts-audio audio row ">
     {% for post in site.posts reversed %}
     <div class="post post-a card w-100 {% if post.enable %}active{% endif %}">
-        
+        <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title {% if post.enable != true %}disable{% endif %}">
         <figure class="card-body row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">     
             <img
             {% if post.enable %}    
@@ -15,9 +15,7 @@
             />
             <div class="card-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <figcaption>    
-                    <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title {% if post.enable != true %}disable{% endif %}">
                         <h1>{{ post.title }}</h1>
-                    </a>
                 </figcaption>
                 {% if post.enable %}    
                 <div class="audio-wave" id="{{ post.audio.trackID }}" data-src="assets/docs/audio/{{ post.audio.trackFile }}"></div>
@@ -30,12 +28,10 @@
                         {% endif %}
                         <time datetime="{{ post.release | date: '%Y-%m-%d' }}">{{ post.release | date: '%d.%m.%Y' }}</time>
                 </span> 
-                
                 <p>{{post.content}}</p>
             </div> 
-            
-            
         </figure>
+        </a>
     </div>
     {% endfor %}
 </div> 

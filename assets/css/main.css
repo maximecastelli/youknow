@@ -6076,7 +6076,7 @@ body {
   body .about .about-link {
     border: #000 solid 2px;
     border-radius: 50%;
-    margin: -.8rem .8rem 0 0; }
+    margin: -.4rem .4rem 0 0; }
 
 body.video .navbar-nav:not(.about) a.nav-link[data-mode="video"] {
   border-bottom: #000 solid 2px; }
@@ -6125,6 +6125,9 @@ h2 {
 span, p {
   font-size: 1.6rem; }
 
+p {
+  margin-bottom: 0; }
+
 a {
   color: black; }
 
@@ -6150,7 +6153,7 @@ a.disable {
       height: 3rem; }
 
 .row {
-  padding: 0.5rem 1rem; }
+  padding: 0rem 1rem; }
 
 footer {
   justify-content: space-between; }
@@ -6168,8 +6171,9 @@ footer {
   display: flex; }
 
 img.icon {
-  height: 1.6rem;
-  width: auto; }
+  height: 1.2rem;
+  width: auto;
+  margin-right: .4rem; }
 
 span.bullet {
   height: 1rem;
@@ -6191,12 +6195,15 @@ span.bullet {
   padding: 5% 0;
   margin-bottom: 2.5%;
   display: flex; }
+  .post .post-bottom span.visits, .post-content .post-bottom span.visits {
+    display: flex;
+    align-items: center; }
 
 .posts .post {
   margin: 2rem 0; }
 
 .posts .posts-text .post {
-  margin: 1rem 0; }
+  margin: 0 0 1rem 1rem; }
 
 .posts .posts-text .post-separator {
   display: block;
@@ -6266,6 +6273,9 @@ section.text .text-column, section.text .text-notes {
   margin: 0 1rem; }
   .about-content p {
     direction: ltr; }
+  .about-content a {
+    color: blue;
+    text-decoration: underline; }
 
 .posts {
   height: 85vh;
