@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "II. COOPERATIVE"
+subtitle: "Citizen Journalism & Citizen Privacy"
 slug: ii-cooperative
 date: 2019-05-05 12:18 +0100
 release: 2019-05-20 22:26 +0200

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "III. HONEST"
+subtitle: " Fake News, Real Context"
 slug: iii-honest
 date: 2019-05-05 12:18 +0100
 release: 2019-06-04 22:26 +0200
@@ -9,7 +10,7 @@ enable: true
 
 video:
   videoID: 0MtwBaDdyC0
-  videoImg: honest.jpg
+  videoImg: cooperative.jpg
 
 audio:
   trackID: Track3

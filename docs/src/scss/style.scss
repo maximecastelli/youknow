@@ -6,7 +6,8 @@ $colors: (
 
 body{
     overflow-x: hidden;
-    font-size: 100%;
+    font-size: 14px;
+    @media (max-width: 1024px){font-size: 50%;}
     //direction: rtl;
     font-family: Arial, Helvetica, sans-serif;
     .about-link{
@@ -123,6 +124,7 @@ a.disable {
 .navbar-custom{
     height:  7.5vh;
     margin-bottom: 7.5vh;
+    @media (max-width: 1024px) { align-items: unset;}
     .bg-custom{
         background-color: white;
     }
@@ -130,8 +132,12 @@ a.disable {
         margin-left:1rem;
     }
     
-    
+    .navbar-menu{
+        display: flex;
+        @media (max-width: 1024px) { padding-top:3rem;}
+    }
     .navbar-nav{
+        flex-direction: row;
         li{
             h2{
              cursor: pointer;
@@ -204,14 +210,15 @@ span.bullet{
         align-items: center;
 
     }
+    .visits{
+        display: flex;
+        align-items: center;
+    }
     .post-bottom{
         padding: 5% 0;
         margin-bottom: 2.5%;
         display: flex;
-        span.visits{
-            display: flex;
-            align-items: center;
-        }
+        
     }
 
 }
@@ -253,13 +260,13 @@ span.text-note{
 .notes{
 
     overflow-y: scroll;
-    height: 25vh;
+    //height: 25vh;
     direction: rtl;
 
     .note-list{
-        min-height: 100%;
+        //min-height: 100%;
         flex-direction: column;
-        justify-content: flex-end;
+        //justify-content: flex-end;
     }
     
     li{
@@ -267,6 +274,7 @@ span.text-note{
         //display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
+        margin: 1rem;
         .note-num{
             font-size: 1rem;
             margin-right: .5rem;
@@ -285,6 +293,10 @@ span.text-note{
 
 .video-notes{
     margin: .5rem;
+}
+
+.video-infos{
+    margin-top: 1rem;
 }
 
 .audio-notes{
@@ -318,6 +330,7 @@ section.text .text-column, section.text .text-notes{
     overflow-y: scroll;
     direction: rtl;
     margin:0 1rem; 
+    padding-right: 2rem;
     p{
         direction: ltr;
     }

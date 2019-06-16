@@ -8,7 +8,7 @@
             <figcaption class="title">
                 <span class="audio-play" data-target="{{ post.audio.trackID }}"><i class="material-icons">play_arrow</i></span>
                 <span class="bullet"></span>
-                <h1> {{ include.title }}</h1>
+                <h2> {{ include.title }} – {{ include.subtitle }}</h2>
             </figcaption>
             <span>
                 Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%d.%m.%Y' }}</time>

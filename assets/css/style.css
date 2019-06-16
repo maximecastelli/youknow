@@ -1,7 +1,10 @@
 body {
   overflow-x: hidden;
-  font-size: 100%;
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
+  @media (max-width: 1024px) {
+    body {
+      font-size: 50%; } }
   body .about-link {
     height: 2.4rem;
     width: 2.4rem;
@@ -79,14 +82,24 @@ a.disable {
 .navbar-custom {
   height: 7.5vh;
   margin-bottom: 7.5vh; }
+  @media (max-width: 1024px) {
+    .navbar-custom {
+      align-items: unset; } }
   .navbar-custom .bg-custom {
     background-color: white; }
   .navbar-custom .brand {
     margin-left: 1rem; }
-  .navbar-custom .navbar-nav li h2 {
-    cursor: pointer; }
-    .navbar-custom .navbar-nav li h2 a {
-      height: 3rem; }
+  .navbar-custom .navbar-menu {
+    display: flex; }
+    @media (max-width: 1024px) {
+      .navbar-custom .navbar-menu {
+        padding-top: 3rem; } }
+  .navbar-custom .navbar-nav {
+    flex-direction: row; }
+    .navbar-custom .navbar-nav li h2 {
+      cursor: pointer; }
+      .navbar-custom .navbar-nav li h2 a {
+        height: 3rem; }
 
 .row {
   padding: 0rem 1rem; }
@@ -127,13 +140,14 @@ span.bullet {
   display: flex;
   align-items: center; }
 
+.post .visits, .post-content .visits {
+  display: flex;
+  align-items: center; }
+
 .post .post-bottom, .post-content .post-bottom {
   padding: 5% 0;
   margin-bottom: 2.5%;
   display: flex; }
-  .post .post-bottom span.visits, .post-content .post-bottom span.visits {
-    display: flex;
-    align-items: center; }
 
 .posts .post {
   margin: 2rem 0; }
@@ -157,16 +171,14 @@ span.text-note .note-switch {
 
 .notes {
   overflow-y: scroll;
-  height: 25vh;
   direction: rtl; }
   .notes .note-list {
-    min-height: 100%;
-    flex-direction: column;
-    justify-content: flex-end; }
+    flex-direction: column; }
   .notes li {
     font-size: 1.5rem;
     flex-direction: row-reverse;
-    align-items: flex-start; }
+    align-items: flex-start;
+    margin: 1rem; }
     .notes li .note-num {
       font-size: 1rem;
       margin-right: .5rem; }
@@ -178,6 +190,9 @@ span.text-note .note-switch {
 
 .video-notes {
   margin: .5rem; }
+
+.video-infos {
+  margin-top: 1rem; }
 
 .audio-notes {
   margin: .5rem 0;
@@ -206,7 +221,8 @@ section.text .text-column, section.text .text-notes {
   height: 85vh;
   overflow-y: scroll;
   direction: rtl;
-  margin: 0 1rem; }
+  margin: 0 1rem;
+  padding-right: 2rem; }
   .about-content p {
     direction: ltr; }
   .about-content a {

@@ -338,6 +338,10 @@ function hasClass(ele,cls) {
     }
   }
   
+
+//Youtube view count
+
+
 // JQERY FUNCTION TO REORDER LIST
 function reorder(list) {
     

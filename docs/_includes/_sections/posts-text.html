@@ -4,7 +4,7 @@
         
         <a href="{{ post.url | prepend: site.baseurl | append:'.html' }}" class="title {% if post.enable != true %}disable{% endif %}">
             <span class="bullet"></span>  
-            <h1>{{ post.title }}</h1>
+            <h2>{{ post.title }}  — {{ post.subtitle }}</h2>
         </a>
         <span>
             {% if post.enable %}    

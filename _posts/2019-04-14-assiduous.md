@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I. ASSIDUOUS"
+subtitle: "Content to automate"
 slug: i-assiduous
 date: 2019-05-05 12:18 +0100
 release: 2019-05-06 12:18 +0100
