@@ -4,7 +4,7 @@ title: "II. COOPERATIVE"
 subtitle: "Citizen Journalism & Citizen Privacy"
 slug: ii-cooperative
 date: 2019-05-05 12:18 +0100
-release: 2019-05-20 22:26 +0200
+release: 2019-06-28 22:26 +0200
 published: true
 enable: true
 
@@ -19,7 +19,7 @@ audio:
 
 text:
   textID: "II.COOPERATIVE"
-  textFile: 2019-05-02-cooperative.txt
+  textFile: 2019-06-28-cooperative.txt
 
 notes:
   - note: "12"

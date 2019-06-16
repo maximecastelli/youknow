@@ -4,7 +4,7 @@ title: "III. HONEST"
 subtitle: " Fake News, Real Context"
 slug: iii-honest
 date: 2019-05-05 12:18 +0100
-release: 2019-06-04 22:26 +0200
+release: 2019-07-12 22:26 +0200
 published: true
 enable: true
 
@@ -14,12 +14,12 @@ video:
 
 audio:
   trackID: Track3
-  trackFile: "III. HONEST.mp3"
+  trackFile: "III-HONEST.mp3"
   trackImg: img.png
 
 text:
   textID: "III.HONEST"
-  textFile: 2019-05-28-honest.txt
+  textFile: 2019-07-12-honest.txt
 
 notes:
   - note: "29"
