@@ -6142,6 +6142,9 @@ a.disable {
   pointer-events: none;
   cursor: default; }
 
+blockquote {
+  margin-left: 6rem; }
+
 /*  --  Navbar  --  */
 .navbar-custom {
   height: 7.5vh;
