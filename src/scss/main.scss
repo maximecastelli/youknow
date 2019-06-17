@@ -7,17 +7,17 @@
 #player{margin: 0 auto;}
 @include media-breakpoint-up(sm) { 
     html{font-size: 12px;}
-    //#player{min-height: 382.5px;}
+    #player{min-height: 382.5px;}
 }
 @include media-breakpoint-up(md) { 
-    html{font-size: 14px;}
-    //#player{min-height: 340px;}
+    html{font-size: 12px;}
+    #player{min-height: 340px;}
 }
 @include media-breakpoint-up(lg) { 
-    html{font-size: 16px;}
-    //#player{min-height: 440px;}
+    html{font-size: 14px;}
+    #player{min-height: 440px;}
 }
 @include media-breakpoint-up(xl) {  
-    html{font-size: 16px;}
-    //#player{min-height: 531.25px;}
+    html{font-size: 14px;}
+    #player{min-height: 531.25px;}
 }

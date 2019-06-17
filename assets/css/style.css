@@ -212,7 +212,9 @@ span.text-note .note-switch {
       font-size: 1rem;
       margin-right: .5rem; }
     .notes li .note-content {
-      direction: ltr; }
+      direction: ltr;
+      width: 100%;
+      word-break: break-word; }
       .notes li .note-content .note-link {
         color: blue;
         text-decoration: underline; }
@@ -240,7 +242,7 @@ span.text-note .note-switch {
   display: flex; }
 
 section.text .text-column, section.text .text-notes {
-  height: 75vh;
+  height: 85vh;
   overflow-y: scroll;
   overflow-x: hidden; }
   section.text .text-column ul, section.text .text-notes ul {

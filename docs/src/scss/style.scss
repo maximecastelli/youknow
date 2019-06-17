@@ -311,6 +311,8 @@ span.text-note{
         }
         .note-content{
             direction: ltr;
+            width: 100%;
+            word-break: break-word;
             .note-link{
                 color: blue;
                 text-decoration: underline;
@@ -347,7 +349,7 @@ span.text-note{
     display: flex;
 }
 section.text .text-column, section.text .text-notes{
-    height: 75vh;
+    height: 85vh;
     overflow-y: scroll;
     overflow-x: hidden;
     ul{
