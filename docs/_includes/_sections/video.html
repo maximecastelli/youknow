@@ -1,17 +1,17 @@
-<section class="video video-{{ include.slug | downcase }} row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<section class="video video-{{ include.slug | downcase }} row">
     <div id="player" data-id="{{ include.video.videoID }}" class="row col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 offset-md-2">
     </div>
     <div class="video-infos row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="title title-{{ include.title | downcase }} col-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 offset-md-2">
+        <div class="title title-{{ include.title | downcase }} col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-md-2">
             <span class="bullet"></span>
-            <h2>{{ include.title }} – {{ include.subtitle }}</h2>
+            <h2>{{ include.title }} – <br class="d-block d-md-none">{{ include.subtitle }}</h2>
         </div>
-        <div class="views views-{{ include.title | downcase }} col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <div class="views views-{{ include.title | downcase }} col-12 col-sm-12 offset-sm-0 offset-md-2 offset-lg-0 col-md-10 col-lg-2 col-xl-2">
             
-            <h3 class="visits" style="justify-content: flex-end;"> <img class="icon" src="../assets/docs/img/user-icon.png"/> 12</h3>
+            <h3 class="visits"> <img class="icon" src="../assets/docs/img/user-icon.png"/> 12</h3>
         </div>
     </div>
-    <span class="col-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 offset-md-2">
+    <span class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-md-2 date">
             Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%d.%m.%Y' }}</time>
     </span> 
     <div class="video-notes notes row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
