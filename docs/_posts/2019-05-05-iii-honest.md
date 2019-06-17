@@ -9,8 +9,8 @@ published: true
 enable: false
 
 video:
-  videoID: 0MtwBaDdyC0
-  videoImg: cooperative.jpg
+  videoID: 
+  videoImg: 
 
 audio:
   trackID: Track3
