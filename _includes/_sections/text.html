@@ -1,17 +1,18 @@
 <section class="text text-{{ include.slug | downcase }} row">
-    <div class="text-title col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
-        <div class="title col-12">
-            <span class="bullet"></span>
-            <h2>{{include.title}} — {{ include.subtitle }}</h2>
-        </div>
-        
-        <br>
-        <span class="text-date col-12">Posted on <time datetime="{{ include.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%d.%m.%Y' }}</time></span>
-
-    </div>
+    
 
     <div class="text-content col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
         <div class="text-column col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" data-src="../assets/docs/texts/{{ include.text.textFile }}">
+            <div class="text-title col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row">
+                <div class="title col-12">
+                    <span class="bullet"></span>
+                    <h2>{{include.title}} — {{ include.subtitle }}</h2>
+                </div>
+                
+                <br>
+                <span class="text-date col-12">Posted on <time datetime="{{ include.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%d.%m.%Y' }}</time></span>
+        
+            </div>
             <p class="text-holder"></p>
         </div>
         <div class="text-notes notes col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
