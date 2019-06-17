@@ -4,10 +4,14 @@ $colors: (
     secondary:#00ff00
 );
 
+html{
+    font-size: 16px;
+}
+
 body{
     overflow-x: hidden;
-    font-size: 14px;
-    @media (max-width: 1024px){font-size: 50%;}
+    font-size: 2rem;
+    
     //direction: rtl;
     font-family: Arial, Helvetica, sans-serif;
     .about-link{
@@ -100,9 +104,17 @@ h2{
     font-size: 2rem;
     margin-bottom: 0;
 }
-span,p{
-    font-size: 1.6rem;
+
+.post-bottom, .card-block{
+    span{
+        font-size: 1.6rem;
+    }
 }
+span.date{
+    font-size: 1.6rem;
+    padding-left:calc(12px + 2rem);
+}
+
 p{
     margin-bottom: 0;
 }
@@ -128,7 +140,7 @@ blockquote {
 .navbar-custom{
     height:  7.5vh;
     margin-bottom: 7.5vh;
-    @media (max-width: 1024px) { align-items: unset;}
+    @media (max-width: 1023px) { align-items: unset;}
     .bg-custom{
         background-color: white;
     }
@@ -138,10 +150,11 @@ blockquote {
     
     .navbar-menu{
         display: flex;
-        @media (max-width: 1024px) { padding-top:3rem;}
+        @media (max-width: 1023px) { position:absolute; top:0; left:0; margin:3rem 0 0 0; padding: 0; }
     }
     .navbar-nav{
         flex-direction: row;
+        @media (max-width: 1023px) { justify-content: space-between; padding:2rem;width:100%; }
         li{
             h2{
              cursor: pointer;
@@ -194,6 +207,8 @@ img.icon{
 span.bullet{
     height: 1rem;
     width: 1rem;
+    min-width: 1rem;
+
     margin: .8rem 1rem .8rem 0;
     //padding: 1rem;
     border-radius: 100%;
@@ -212,11 +227,14 @@ span.bullet{
         flex-direction: row;
         display: flex;
         align-items: center;
+        @media (max-width: 1023px){align-items: unset;}
 
     }
     .visits{
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        @media (max-width: 1023px){justify-content: flex-start;}
     }
     .post-bottom{
         padding: 5% 0;
@@ -320,7 +338,7 @@ span.text-note{
     display: flex;
 }
 section.text .text-column, section.text .text-notes{
-    height: 70vh;
+    height: 75vh;
     overflow-y: scroll;
     overflow-x: hidden;
     ul{

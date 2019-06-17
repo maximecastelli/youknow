@@ -3,17 +3,21 @@
 @import "bootstrap/bootstrap";
 @import "style";
 
-#player{min-height: 212.5px;}
-
+//#player{min-height: 212.5px;}
+#player{margin: 0 auto;}
 @include media-breakpoint-up(sm) { 
-    #player{min-height: 382.5px;}
+    html{font-size: 12px;}
+    //#player{min-height: 382.5px;}
 }
 @include media-breakpoint-up(md) { 
-    #player{min-height: 340px;}
+    html{font-size: 14px;}
+    //#player{min-height: 340px;}
 }
 @include media-breakpoint-up(lg) { 
-    #player{min-height: 440px;}
+    html{font-size: 16px;}
+    //#player{min-height: 440px;}
 }
 @include media-breakpoint-up(xl) {  
-    #player{min-height: 531.25px;}
+    html{font-size: 16px;}
+    //#player{min-height: 531.25px;}
 }
