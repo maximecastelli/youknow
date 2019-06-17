@@ -236,6 +236,7 @@ span.bullet{
         
     }
     .views{
+        padding:0;
         .visits{
             justify-content: flex-end;
             @media (max-width: 1023px){justify-content: flex-start;}
@@ -260,7 +261,8 @@ span.bullet{
         }
         .post-separator{
             display: block;
-            height: 4rem;
+            //height: 4rem;
+            height: 0;
             width: 100%;
         }
         .post.active{
@@ -281,6 +283,7 @@ span.text-note{
         line-height: .8em;
         vertical-align:super;
         text-decoration:none;
+        cursor: pointer;
     }
 }
 
@@ -301,7 +304,7 @@ span.text-note{
         //display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
-        margin: 1rem;
+        margin: 0 1rem 1rem 1rem;
         .note-num{
             font-size: 1rem;
             margin-right: .5rem;
@@ -320,6 +323,7 @@ span.text-note{
 
 .video-notes{
     margin: .5rem;
+    min-height: 15vh;
 }
 
 .video-infos{
@@ -327,7 +331,7 @@ span.text-note{
 }
 
 .audio-notes{
-    margin: .5rem 0;
+    margin: 2rem 0.5rem 0;
     height: 50vh;
 }
 .card{

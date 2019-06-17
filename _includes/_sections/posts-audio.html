@@ -17,17 +17,18 @@
                 <figcaption>    
                         <h2>{{ post.title }} — {{ post.subtitle }}</h2>
                 </figcaption>
+                <span>
+                    {% if post.enable %}    
+                        Posted on 
+                    {% else %}
+                        Release on 
+                    {% endif %}
+                    <time datetime="{{ post.release | date: '%Y-%m-%d' }}">{{ post.release | date: '%d.%m.%Y' }}</time>
+                </span> 
                 {% if post.enable %}    
                 <div class="audio-wave" id="{{ post.audio.trackID }}" data-src="assets/docs/audio/{{ post.audio.trackFile }}"></div>
                 {% endif %} 
-                <span>
-                        {% if post.enable %}    
-                            Posted on 
-                        {% else %}
-                            Release on 
-                        {% endif %}
-                        <time datetime="{{ post.release | date: '%Y-%m-%d' }}">{{ post.release | date: '%d.%m.%Y' }}</time>
-                </span> 
+                
                 <p>{{post.content}}</p>
             </div> 
         </figure>

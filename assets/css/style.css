@@ -164,11 +164,13 @@ span.bullet {
   display: flex;
   align-items: center; }
 
-.post .views .visits, .post-content .views .visits {
-  justify-content: flex-end; }
-  @media (max-width: 1023px) {
-    .post .views .visits, .post-content .views .visits {
-      justify-content: flex-start; } }
+.post .views, .post-content .views {
+  padding: 0; }
+  .post .views .visits, .post-content .views .visits {
+    justify-content: flex-end; }
+    @media (max-width: 1023px) {
+      .post .views .visits, .post-content .views .visits {
+        justify-content: flex-start; } }
 
 .post .post-bottom, .post-content .post-bottom {
   padding: 5% 0;
@@ -183,7 +185,7 @@ span.bullet {
 
 .posts .posts-text .post-separator {
   display: block;
-  height: 4rem;
+  height: 0;
   width: 100%; }
 
 span.text-note .note-switch {
@@ -193,7 +195,8 @@ span.text-note .note-switch {
   font-size: .8em;
   line-height: .8em;
   vertical-align: super;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 .notes {
   overflow-y: scroll;
@@ -204,7 +207,7 @@ span.text-note .note-switch {
     font-size: 1.5rem;
     flex-direction: row-reverse;
     align-items: flex-start;
-    margin: 1rem; }
+    margin: 0 1rem 1rem 1rem; }
     .notes li .note-num {
       font-size: 1rem;
       margin-right: .5rem; }
@@ -215,13 +218,14 @@ span.text-note .note-switch {
         text-decoration: underline; }
 
 .video-notes {
-  margin: .5rem; }
+  margin: .5rem;
+  min-height: 15vh; }
 
 .video-infos {
   margin-top: 1rem; }
 
 .audio-notes {
-  margin: .5rem 0;
+  margin: 2rem 0.5rem 0;
   height: 50vh; }
 
 .card {
