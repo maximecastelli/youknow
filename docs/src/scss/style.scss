@@ -233,8 +233,13 @@ span.bullet{
     .visits{
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        @media (max-width: 1023px){justify-content: flex-start;}
+        
+    }
+    .views{
+        .visits{
+            justify-content: flex-end;
+            @media (max-width: 1023px){justify-content: flex-start;}
+        }
     }
     .post-bottom{
         padding: 5% 0;

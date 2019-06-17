@@ -6226,10 +6226,12 @@ span.bullet {
 
 .post .visits, .post-content .visits {
   display: flex;
-  align-items: center;
+  align-items: center; }
+
+.post .views .visits, .post-content .views .visits {
   justify-content: flex-end; }
   @media (max-width: 1023px) {
-    .post .visits, .post-content .visits {
+    .post .views .visits, .post-content .views .visits {
       justify-content: flex-start; } }
 
 .post .post-bottom, .post-content .post-bottom {
