@@ -237,6 +237,7 @@ span.bullet{
     }
     .views{
         padding:0;
+        @media (max-width: 1023px){padding: 0 calc(15px + 1.6rem);}
         .visits{
             justify-content: flex-end;
             @media (max-width: 1023px){justify-content: flex-start;}
@@ -325,7 +326,7 @@ span.text-note{
 
 .video-notes{
     margin: .5rem;
-    min-height: 15vh;
+    height: 15vh;
 }
 
 .video-infos{

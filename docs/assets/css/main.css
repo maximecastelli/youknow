@@ -6230,6 +6230,9 @@ span.bullet {
 
 .post .views, .post-content .views {
   padding: 0; }
+  @media (max-width: 1023px) {
+    .post .views, .post-content .views {
+      padding: 0 calc(15px + 1.6rem); } }
   .post .views .visits, .post-content .views .visits {
     justify-content: flex-end; }
     @media (max-width: 1023px) {
@@ -6285,7 +6288,7 @@ span.text-note .note-switch {
 
 .video-notes {
   margin: .5rem;
-  min-height: 15vh; }
+  height: 15vh; }
 
 .video-infos {
   margin-top: 1rem; }
