@@ -6,11 +6,11 @@ slug: ii-cooperative
 date: 2019-05-05 12:18 +0100
 release: 2019-06-28 22:26 +0200
 published: true
-enable: false
+enable: true
 
 video:
-  videoID: 
-  videoImg: 
+  videoID: https://youtu.be/PyDG1CtSDhY
+  videoImg: cooperative.jpg
 
 audio:
   trackID: cooperative
