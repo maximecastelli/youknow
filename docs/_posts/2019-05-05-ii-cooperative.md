@@ -9,7 +9,7 @@ published: true
 enable: true
 
 video:
-  videoID: https://youtu.be/PyDG1CtSDhY
+  videoID: PyDG1CtSDhY
   videoImg: cooperative.jpg
 
 audio:
