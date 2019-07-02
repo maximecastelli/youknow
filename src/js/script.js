@@ -28,21 +28,6 @@ var clickMode = function(e){
 document.body.classList += localStorage.getItem('mode');
     
 
-/*
-function setActive(){
-    console.log('setActive Launched')
-    $('a.nav-link').each(function(){
-        if($(this).data('mode') == localStorage.getItem('mode')){
-            $(this).addClass('active');
-        }else{
-            $(this).removeClass('active');
-        }
-    });
-}
-*/
-
-// VIDEO PLAYER FUNCTIONS
-
 // IFrame Player API async
 var tag = document.createElement('script');
 
@@ -90,7 +75,10 @@ player = new YT.Player('player', {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
 //event.target.playVideo();
-    
+    //console.log(event.target);
+    //console.log(event.target.getVideoData());
+    //console.log(videoId);
+    getViews(videoId, $('.visits span'));
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -296,6 +284,12 @@ $(document).ready(function() {
         reorder('.note-list');
     });
 
+    // grab all yt video and set visit counter
+    $('.posts-video > .post.active').each(function(){
+        var cv = $(this).data('video');
+        getViews( cv , $(this).find('.visits span'));
+    });
+
 }); 
 
 
@@ -342,6 +336,30 @@ function hasClass(ele,cls) {
 //Youtube view count
 
 
+
+
+function getViews(vid, target) {
+    console.log('fn start');
+    $.get(
+        "https://www.googleapis.com/youtube/v3/videos", {
+            part: 'statistics',
+            id: vid,
+            key: 'AIzaSyDUeh5zIbtg_9dEYVNiFX2nrCC4iZ2l-fw'
+        },
+        function (data) {
+            var o;
+            console.log('data found');
+            $.each(data.items, function (i, item) {
+                console.log("COUNTER CALLED: "+ item.statistics.viewCount);
+                $(target).text(item.statistics.viewCount);
+
+            })
+        }
+    );
+}
+
+
+
 // JQERY FUNCTION TO REORDER LIST
 function reorder(list) {
     
@@ -354,3 +372,5 @@ function reorder(list) {
     });
     $(list).append( order );
 }
+
+
