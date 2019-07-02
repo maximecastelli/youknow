@@ -1,7 +1,7 @@
 <div class="posts-video video row">
     {% for post in site.posts reversed %}
     
-    <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 {% if post.enable %}active{% endif %}" >
+    <div class="post col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 {% if post.enable %}active{% endif %}" data-video="{{post.video.videoID}}">
             <a class="img-link {% if post.enable != true %}disable{% endif %}" href="{{ post.url | prepend: site.baseurl | append:'.html' }}">
             {% if post.video.videoImg ==  %}
             <img src="assets/docs/img/video_placeholder.jpg" class="img-fluid" alt="post img">
@@ -27,7 +27,7 @@
                 <br/>
                 <span class="visits">
                     {% if post.enable %}
-                    <img src="assets/docs/img/user-icon.png" class="icon" />12
+                    <img src="assets/docs/img/user-icon.png" class="icon" /><span>12</span>
                     {% endif %}
                 </span>
             </div>
