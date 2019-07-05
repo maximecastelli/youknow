@@ -4,7 +4,7 @@ html {
 body {
   overflow-x: hidden;
   font-size: 2rem;
-  font-family: 'Arial', Arial, Helvetica, sans-serif; }
+  font-family: 'Arial', Arial, Helvetica, sans-serif !important; }
   body .about-link {
     height: 2.4rem;
     width: 2.4rem;
@@ -96,6 +96,8 @@ blockquote {
     background-color: white; }
   .navbar-custom .brand {
     margin-left: 1rem; }
+  .navbar-custom .navbar-brand {
+    padding-left: 0; }
   .navbar-custom .navbar-menu {
     display: flex; }
     @media (max-width: 1023px) {
@@ -116,6 +118,11 @@ blockquote {
       cursor: pointer; }
       .navbar-custom .navbar-nav li h2 a {
         height: 3rem; }
+    .navbar-custom .navbar-nav .nav-link {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      padding-right: 0rem;
+      padding-left: 0rem; }
 
 .row {
   padding: 0rem 1rem; }
@@ -163,7 +170,8 @@ span.bullet {
 
 .post .visits, .post-content .visits {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: -10px; }
 
 .post .views, .post-content .views {
   padding: 0; }
@@ -182,7 +190,7 @@ span.bullet {
   display: flex; }
 
 .posts .post {
-  margin: 2rem 0; }
+  margin: 2rem 1rem; }
 
 .posts .posts-text .post {
   margin: 0 0 1rem 1rem; }
@@ -231,7 +239,7 @@ span.text-note .note-switch {
   margin-top: 1rem; }
 
 .audio-notes {
-  margin: 2rem 0.5rem 0;
+  margin: 2rem 0rem 0;
   height: 50vh; }
 
 .card {
@@ -280,6 +288,14 @@ section.text .text-column, section.text .text-notes {
     direction: ltr; }
     .posts div .post {
       margin-top: 0; }
+
+.audio-wave {
+  background-image: linear-gradient(90deg, red, red);
+  background-size: 0% 100%;
+  background-position-x: 0%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: background-size ease-in-out .3s; }
 
 body *::-webkit-scrollbar-track {
   background-color: #fff;

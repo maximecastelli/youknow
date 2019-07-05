@@ -13,7 +13,7 @@ body{
     font-size: 2rem;
     
     //direction: rtl;
-    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Arial, Helvetica, sans-serif !important;
     .about-link{
         
         height: 2.4rem;
@@ -147,9 +147,14 @@ blockquote {
     .brand{
         margin-left:1rem;
     }
-    
+    .navbar-brand{
+        padding-left:0; 
+    }   
     .navbar-menu{
         display: flex;
+        
+
+
         @media (max-width: 1023px) { position:absolute; top:0; left:0; margin:3rem 0 0 0; padding: 0; }
     }
     .navbar-nav{
@@ -162,6 +167,13 @@ blockquote {
                     height: 3rem;
                 }
             }
+        }
+        .nav-link{
+            margin-right: 0.5rem; 
+            margin-left: 0.5rem; 
+
+            padding-right: 0rem; 
+            padding-left: 0rem; 
         }
     }
 }
@@ -234,7 +246,8 @@ span.bullet{
     .visits{
         display: flex;
         align-items: center;
-        
+        margin-right: -10px;
+
     }
     .views{
         padding:0;
@@ -255,7 +268,7 @@ span.bullet{
 
 .posts{
     .post{
-        margin: 2rem 0;
+        margin: 2rem 1rem;
     }
     .posts-text{
         .post{
@@ -335,7 +348,7 @@ span.text-note{
 }
 
 .audio-notes{
-    margin: 2rem 0.5rem 0;
+    margin: 2rem 0rem 0;
     height: 50vh;
 }
 .card{
@@ -395,6 +408,17 @@ section.text .text-column, section.text .text-notes{
         }
     }
 }
+
+.audio-wave{
+    background-image: linear-gradient(90deg,red,red);
+    background-size: 0% 100%;
+    background-position-x: 0%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    transition: background-size ease-in-out .3s;
+    
+}
+
 body *::-webkit-scrollbar-track
 {
 	//-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
