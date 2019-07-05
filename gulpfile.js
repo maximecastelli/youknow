@@ -17,10 +17,17 @@ var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
  * Build the Jekyll Site
  * runs a child process in node that runs the jekyll commands
  */
+/*
 gulp.task('jekyll-build', function (done) {
 	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
 		.on('close', done);
 });
+*/
+
+gulp.task('jekyll-build', () => {
+	return cp.exec('bundle exec jekyll build');
+});
+
 
 /*
  * Rebuild Jekyll & reload browserSync

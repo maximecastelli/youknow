@@ -4,7 +4,7 @@ html {
 body {
   overflow-x: hidden;
   font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: 'Arial', Arial, Helvetica, sans-serif; }
   body .about-link {
     height: 2.4rem;
     width: 2.4rem;
@@ -125,7 +125,8 @@ footer {
 
 .audio-notes ul, .video-notes ul, .text-notes ul {
   display: flex;
-  flex-direction: column-reverse; }
+  flex-direction: column-reverse;
+  justify-content: flex-end; }
 
 .audio-notes li, .video-notes li, .text-notes li {
   display: none; }
