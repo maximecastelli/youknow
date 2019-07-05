@@ -136,28 +136,43 @@ $('.posts-audio .audio-wave').each(function(i){
     var trackID = $(this).attr('id');
     var src = $(this).data('src');
     var wave = createWave(trackID, src); 
+    var current =  $(this);
 
-    //wave.on('play', pauseAll(i, waves)); 
+    wave.on('loading', function(e) {
+
+        current.css('background-size', e + '% 100%');
+    });
+    wave.on('ready', function () {
+        current.css('background-position-x', 100+'%');
+        current.css('background-size', '0% 100%');
+    });
 
     waves.push(wave);
 });
 
 $('.audio-post .audio-wave').each(function(i){
-    console.log('Wave');
+    //console.log('Wave');
     var trackID = $(this).attr('id');
     var src = $(this).data('src');
     var wave = createWave(trackID, src); 
-
+    var current =  $(this);
+    
+    wave.on('loading', function(e) {
+        console.log( this.classList+ ' - ' + e);
+        current.css('background-size', e + '% 100%');
+    });
     //wave.on('play', pauseAll(i, waves)); 
     wave.on('ready', function () {
         createRegions($('.audio-notes li'), 300, wave);
-        console.log('Region');
+        current.css('background-position-x', 100+'%');
+        current.css('background-size', '0% 100%');
+        //console.log('Region');
     });
 
     wave.on('region-in', function(region) {
         
-        console.log("region-in");
-        console.log(region);
+        //console.log("region-in");
+        //console.log(region);
         
         var rIndex = region.id.slice(3);
 
@@ -169,6 +184,7 @@ $('.audio-post .audio-wave').each(function(i){
             hide(ans[rIndex]);
         });
     });
+    
     waves.push(wave);
 });
 
