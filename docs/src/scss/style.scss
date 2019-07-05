@@ -410,8 +410,8 @@ section.text .text-column, section.text .text-notes{
 }
 
 .audio-wave{
-    background-image: linear-gradient(90deg,red,red);
-    background-size: 0% 100%;
+    background-image: linear-gradient(90deg,rgba(255,0,0,.16), rgba(255,0,0,.24));
+    background-size: 0% 50%;
     background-position-x: 0%;
     background-position-y: center;
     background-repeat: no-repeat;
