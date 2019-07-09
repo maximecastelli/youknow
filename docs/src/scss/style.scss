@@ -140,7 +140,7 @@ blockquote {
 .navbar-custom{
     height:  7.5vh;
     margin-bottom: 7.5vh;
-    @media (max-width: 1023px) { align-items: unset;}
+    @media (max-width: 1023px) { align-items: unset; height: 7.5rem;}
     .bg-custom{
         background-color: white;
     }
@@ -155,7 +155,7 @@ blockquote {
         
 
 
-        @media (max-width: 1023px) { position:absolute; top:0; left:0; margin:3rem 0 0 0; padding: 0; }
+        @media (max-width: 1023px) { position:absolute; top:0; left:0; margin:3rem 0; padding: 0; }
     }
     .navbar-nav{
         flex-direction: row;
@@ -268,7 +268,7 @@ span.bullet{
 
 .posts{
     .post{
-        margin: 2rem 1rem;
+        margin: 2rem 0rem;
     }
     .posts-text{
         .post{

@@ -6160,7 +6160,8 @@ blockquote {
   margin-bottom: 7.5vh; }
   @media (max-width: 1023px) {
     .navbar-custom {
-      align-items: unset; } }
+      align-items: unset;
+      height: 7.5rem; } }
   .navbar-custom .bg-custom {
     background-color: white; }
   .navbar-custom .brand {
@@ -6174,7 +6175,7 @@ blockquote {
         position: absolute;
         top: 0;
         left: 0;
-        margin: 3rem 0 0 0;
+        margin: 3rem 0;
         padding: 0; } }
   .navbar-custom .navbar-nav {
     flex-direction: row; }
@@ -6259,7 +6260,7 @@ span.bullet {
   display: flex; }
 
 .posts .post {
-  margin: 2rem 1rem; }
+  margin: 2rem 0rem; }
 
 .posts .posts-text .post {
   margin: 0 0 1rem 1rem; }
