@@ -110,9 +110,16 @@ h2{
         font-size: 1.6rem;
     }
 }
+.text-content{
+    span.date{
+        font-size: 1.6rem;
+        padding-left:calc(12px + 2rem);
+    }
+}
+
 span.date{
     font-size: 1.6rem;
-    padding-left:calc(12px + 2rem);
+    padding-left:calc(6px + 1.6rem);
 }
 
 p{
@@ -288,6 +295,14 @@ span.bullet{
     }
 }
 
+p.text-holder{
+    margin-top: 1rem;
+}
+
+span.audio-date {
+    margin-left: 7rem;
+}
+
 span.text-note{
     //background-color:rgba(map-get($colors, primary),.16);
     .note-switch{
@@ -340,7 +355,7 @@ span.text-note{
 
 .video-notes{
     margin: .5rem;
-    height: 15vh;
+    height: 25vh;
 }
 
 .video-infos{
@@ -411,7 +426,7 @@ section.text .text-column, section.text .text-notes{
 
 .audio-wave{
     background-image: linear-gradient(90deg,rgba(255,0,0,.16), rgba(255,0,0,.24));
-    background-size: 0% 50%;
+    background-size: 0% 100%;
     background-position-x: 0%;
     background-position-y: center;
     background-repeat: no-repeat;

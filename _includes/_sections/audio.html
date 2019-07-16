@@ -10,7 +10,7 @@
                 <span class="bullet"></span>
                 <h2> {{ include.title }} – {{ include.subtitle }}</h2>
             </figcaption>
-            <span>
+            <span class="audio-date"> 
                 Posted on <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%d.%m.%Y' }}</time>
             </span> 
             <div class="audio-wave" id="{{ include.audio.trackID }}" data-src="../assets/docs/audio/{{ include.audio.trackFile }}"></div>

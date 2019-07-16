@@ -140,11 +140,11 @@ $('.posts-audio .audio-wave').each(function(i){
 
     wave.on('loading', function(e) {
 
-        current.css('background-size', e + '% 50%');
+        current.css('background-size', e + '% 100%');
     });
     wave.on('ready', function () {
         current.css('background-position-x', 100+'%');
-        current.css('background-size', '0% 50%');
+        current.css('background-size', '0% 100%');
     });
 
     waves.push(wave);
@@ -159,13 +159,13 @@ $('.audio-post .audio-wave').each(function(i){
     
     wave.on('loading', function(e) {
         console.log( this.classList+ ' - ' + e);
-        current.css('background-size', e + '% 50%');
+        current.css('background-size', e + '% 100%');
     });
     //wave.on('play', pauseAll(i, waves)); 
     wave.on('ready', function () {
         createRegions($('.audio-notes li'), 300, wave);
         current.css('background-position-x', 100+'%');
-        current.css('background-size', '0% 50%');
+        current.css('background-size', '0% 100%');
         //console.log('Region');
     });
 
