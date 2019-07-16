@@ -2,7 +2,8 @@
 layout: about
 ---
 
-<i>A collection of video/text/audio essays laid out as a series of eight articles written during Thomas Grogan’s residency at FACT Liverpool & the BBC in Salford and London. His residency took place in mid-2018 and was part of The Future World of Work programme.</i><br>
+<i>A collection of video/text/audio essays laid out as a series of eight articles written during and after Thomas Grogan’s residency at FACT Liverpool & the BBC in Salford and London. His residency took place in mid-2018 and was part of The Future World of Work programme.</i><br>
+<br>
 Abstract:  
 "By looking at BBC journalists workflows, BBC R&D experiments and real world events, this research aims to evaluate the impact of automation and Artificial Intelligence in the construction and consumption of news items. In the first part of this research, we have collected evidence of a shift in journalistic labour to then, in a second part, speculate on the future of journalism.
 As for today, we believe that the two processes of construction and consumption of news are centred around the human being seen as a universal ‘subject’ and ‘the public’ as a collection of these conflicting subjectivities. However, in the process of our research, we have aimed to re-define to some extent the audience and producers of news as a series of participatory objects which are made more fungible and interchangeable with each other via the dynamics of AI systems.
