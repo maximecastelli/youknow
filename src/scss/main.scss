@@ -5,19 +5,24 @@
 
 //#player{min-height: 212.5px;}
 #player{margin: 0 auto;}
+html{font-size: 12px !important;}
+
+@include media-breakpoint-up(xs) { 
+    html{font-size: 12px !important;}
+}
 @include media-breakpoint-up(sm) { 
-    html{font-size: 12px;}
+    html{font-size: 12px !important;}
     #player{min-height: 382.5px;}
 }
 @include media-breakpoint-up(md) { 
-    html{font-size: 12px;}
+    html{font-size: 12px !important;}
     #player{min-height: 340px;}
 }
 @include media-breakpoint-up(lg) { 
-    html{font-size: 14px;}
+    html{font-size: 14px !important;}
     #player{min-height: 440px;}
 }
 @include media-breakpoint-up(xl) {  
-    html{font-size: 14px;}
+    html{font-size: 14px !important;}
     #player{min-height: 531.25px;}
 }
