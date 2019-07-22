@@ -6138,11 +6138,11 @@ h2 {
 
 .text-content span.date {
   font-size: 1.6rem;
-  padding-left: calc(12px + 2rem); }
+  padding-left: 2rem; }
 
 span.date {
   font-size: 1.6rem;
-  padding-left: calc(6px + 2rem); }
+  padding-left: 2rem; }
 
 p {
   margin-bottom: 0; }
@@ -6229,7 +6229,7 @@ span.bullet {
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
-  margin: .8rem 1rem .8rem 0;
+  margin: .5rem 1rem .5rem 0;
   border-radius: 100%;
   background: #ff0000;
   display: block; }
@@ -6241,9 +6241,6 @@ span.bullet {
   flex-direction: row;
   display: flex;
   align-items: center; }
-  @media (max-width: 1023px) {
-    .post .title, .post-content .title {
-      align-items: unset; } }
 
 .post .visits, .post-content .visits {
   display: flex;
@@ -6281,7 +6278,13 @@ p.text-holder {
   margin-top: 1rem; }
 
 span.audio-date {
-  margin-left: 7rem; }
+  margin-left: 7rem;
+  display: block;
+  margin-top: -1rem;
+  margin-bottom: 1rem; }
+  @media (max-width: 400px) {
+    span.audio-date {
+      margin-top: unset; } }
 
 span.text-note .note-switch {
   color: blue;
@@ -6316,21 +6319,25 @@ span.text-note .note-switch {
 
 .video-notes {
   margin: 1rem;
-  height: 25vh; }
+  height: 25vh;
+  padding: 0; }
 
 .video-infos {
-  margin-top: 1rem; }
+  margin-top: 1.5rem; }
+  @media (max-width: 1023px) {
+    .video-infos .title {
+      align-items: unset; } }
 
 .audio-notes {
-  margin: 2rem 0rem 0;
-  height: 50vh; }
+  margin: 5rem 0rem 0;
+  height: 55vh; }
 
 .card {
   border: none; }
 
 .audio-play .material-icons {
   font-size: 4rem;
-  margin: .5rem;
+  margin: .5rem .5rem .5rem 0;
   cursor: pointer; }
 
 .audio figcaption {
@@ -6340,6 +6347,18 @@ section.text .text-column, section.text .text-notes {
   height: 85vh;
   overflow-y: scroll;
   overflow-x: hidden; }
+  @media (max-width: 767px) {
+    section.text .text-column, section.text .text-notes {
+      direction: rtl;
+      margin-left: calc(1rem + 5px);
+      border-left: solid 2px #ff0000; } }
+  @media (max-width: 767px) {
+    section.text .text-column .text-title, section.text .text-notes .text-title {
+      direction: ltr;
+      margin: 0;
+      padding: 0; } }
+  section.text .text-column .text-title .title, section.text .text-notes .text-title .title {
+    padding: 0; }
   section.text .text-column ul, section.text .text-notes ul {
     margin-left: 0;
     padding-left: 0; }
@@ -6358,6 +6377,10 @@ section.text .text-column, section.text .text-notes {
   .about-content img {
     max-width: 10rem;
     margin: 1rem 2rem 1rem 0; }
+
+@media (max-width: 1023px) {
+  .card-img-top {
+    margin: 1rem 0; } }
 
 .posts {
   height: 85vh;
