@@ -6380,7 +6380,7 @@ section.text .text-column, section.text .text-notes {
 
 @media (max-width: 1023px) {
   .card-img-top {
-    margin: 1rem 0; } }
+    margin-bottom: 1rem; } }
 
 .posts {
   height: 85vh;
