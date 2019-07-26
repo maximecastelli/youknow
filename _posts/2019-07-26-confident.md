@@ -1,23 +1,20 @@
 ---
 layout: post
-title: "IV. CONFIDENT"
-subtitle: "Artificial Cat & Mouse"
-slug: vi-confident
-date: 2019-05-05 12:18 +0100
-release: 2019-07-26 22:27 +0200
+title: IV. CONFIDENT
+date: 2019-07-26 12:18 +0100
 published: true
 enable: true
 
 video:
-  videoID: 19HDlHyAZo4
+  videoID: 0MtwBaDdyC0
   videoImg: confident.jpg
 
 audio:
   trackID: Track4
-  trackFile: "IV-CONFIDENT.mp3"
+  trackFile: "IV. CONFIDENT.mp3"
   trackImg: img.png
-
-text:
+        
+text: 
   textID: "IV.CONFIDENT"
   textFile: 2019-07-26-confident.txt
 
@@ -100,5 +97,3 @@ notes:
     videoTS: 661.5
     audioTS: 572.5
     content: "En.wikipedia.org. (2018). <i>Kuleshov effect</i>. [online] Available at&#58; https://en.wikipedia.org/wiki/Kuleshov_effect [Accessed 3 Oct. 2018]."
-
----
