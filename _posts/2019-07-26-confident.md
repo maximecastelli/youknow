@@ -2,8 +2,8 @@
 layout: post
 title: IV. CONFIDENT
 date: 2019-07-26 12:18 +0100
-published: true
-enable: true
+published: false
+enable: false
 
 video:
   videoID: 0MtwBaDdyC0
