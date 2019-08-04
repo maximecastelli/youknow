@@ -476,11 +476,13 @@ body *::-webkit-scrollbar
 	width: 10px;
 	
 }
-
+*{
+    -webkit-overflow-scrolling: touch;
+}
 
 body *::-webkit-scrollbar-thumb
 {
-	background-color: #ff0000;
+	background-color: #ff0000; 
 
 }
 
