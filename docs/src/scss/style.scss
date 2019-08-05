@@ -476,9 +476,7 @@ body *::-webkit-scrollbar
 	width: 10px;
 	
 }
-*{
-    -webkit-overflow-scrolling: touch;
-}
+
 
 body *::-webkit-scrollbar-thumb
 {
@@ -489,3 +487,23 @@ body *::-webkit-scrollbar-thumb
 footer.footer{
     display: none;
 }
+
+//stupid ios specific stuff
+@supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */ 
+    *{
+        -webkit-overflow-scrolling: touch;
+    }
+    section.text {
+        .text-column, .text-notes {
+            border-left: none;
+        }
+    }
+    .posts .posts-text .post {
+        margin: 0 ;
+    }
+    .post figure.card-body{
+        margin: 0 auto;
+    }
+}
+  
