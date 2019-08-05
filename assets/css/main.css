@@ -6189,7 +6189,7 @@ blockquote {
     @media (max-width: 1023px) {
       .navbar-custom .navbar-nav {
         justify-content: space-between;
-        padding: 2rem;
+        padding: 2rem .5rem;
         width: 100%; } }
     .navbar-custom .navbar-nav li h2 {
       cursor: pointer; }

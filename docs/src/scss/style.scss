@@ -167,7 +167,7 @@ blockquote {
     }
     .navbar-nav{
         flex-direction: row;
-        @media (max-width: 1023px) { justify-content: space-between; padding:2rem;width:100%; }
+        @media (max-width: 1023px) { justify-content: space-between; padding:2rem .5rem;width:100%; }
         li{
             h2{
              cursor: pointer;
