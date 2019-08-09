@@ -6,11 +6,11 @@ slug: v-impartial
 date: 2019-05-05 12:18 +0100
 release: 2019-08-09 22:27 +0200
 published: true
-enable: false
+enable: true
 
 video:
-  videoID: 
-  videoImg: 
+  videoID: ynGgFmbxKg8
+  videoImg: impartial.jpg
 
 audio:
   trackID: Track5
