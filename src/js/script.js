@@ -131,24 +131,32 @@ function onProgress(currentTime) {
 var waves = [];
 var ans = document.querySelectorAll('.audio-notes li');
 
-$('.posts-audio .audio-wave').each(function(i){
-    //console.log('Wave');
-    var trackID = $(this).attr('id');
-    var src = $(this).data('src');
-    var wave = createWave(trackID, src); 
-    var current =  $(this);
 
-    wave.on('loading', function(e) {
 
-        current.css('background-size', e + '% 100%');
+if (window.matchMedia("(min-width: 768px)").matches) {
+    /* La largeur minimum de l'affichage est 768 px inclus */
+    $('.posts-audio .audio-wave').each(function(i){
+        //console.log('Wave');
+        var trackID = $(this).attr('id');
+        var src = $(this).data('src');
+        var wave = createWave(trackID, src); 
+        var current =  $(this);
+    
+        wave.on('loading', function(e) {
+    
+            current.css('background-size', e + '% 100%');
+        });
+        wave.on('ready', function () {
+            current.css('background-position-x', 100+'%');
+            current.css('background-size', '0% 100%');
+        });
+    
+        waves.push(wave);
     });
-    wave.on('ready', function () {
-        current.css('background-position-x', 100+'%');
-        current.css('background-size', '0% 100%');
-    });
+  } else {
+    /* L'affichage est inférieur à 600px de large */
+  }
 
-    waves.push(wave);
-});
 
 $('.audio-post .audio-wave').each(function(i){
     //console.log('Wave');
