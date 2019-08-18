@@ -13,7 +13,7 @@ Abstract:<br>
 <br>
 Credits:<br>
 Co-writer - Paul van Herk<br>
-Web Progammer - Maxime Castelli<br>
+Web Programmer - Maxime Castelli<br>
 Web Designer - Lauren Budestschu<br>
 Sound Designer - Loic Notaroberto<br>
 <br>

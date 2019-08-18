@@ -134,11 +134,12 @@ gulp.task('js', function(){
 gulp.task('watch', function() {
 	gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], gulp.series('sass', 'jekyll-rebuild'));
 	gulp.watch('src/js/**/*.js', gulp.series('js', 'jekyll-rebuild'));
-	gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series('imagemin', 'jekyll-rebuild'));
-	gulp.watch(['_layouts/*.html','_pages/*.html','_posts/*.html', '_includes/**/*.html'], gulp.series('jekyll-rebuild'));
+	//gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series('imagemin', 'jekyll-rebuild'));
+	//gulp.watch(['_layouts/*.html','_pages/*.html','_posts/*.html', '_includes/**/*.html'], gulp.series('jekyll-rebuild'));
   });
 
 //gulp.task('default', ['js', 'sass', 'browser-sync', 'watch']);
 //gulp.task('default', gulp.series('js', 'fonts', 'sass', 'imagemin', 'audio', 'texts','browser-sync', 'watch'));
 
 gulp.task('default', gulp.series('js', 'fonts', 'imagemin', 'sass', 'audio', 'texts', gulp.parallel('browser-sync', 'watch')));
+gulp.task('serve', gulp.parallel('browser-sync', 'watch')); 
