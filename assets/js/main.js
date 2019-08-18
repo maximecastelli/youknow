@@ -133,7 +133,7 @@ var ans = document.querySelectorAll('.audio-notes li');
 
 
 
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia("(min-width: 1024px)").matches) {
     /* La largeur minimum de l'affichage est 768 px inclus */
     $('.posts-audio .audio-wave').each(function(i){
         //console.log('Wave');
@@ -154,7 +154,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
         waves.push(wave);
     });
   } else {
-    /* L'affichage est inférieur à 600px de large */
+    /* L'affichage est inférieur à 768 de large */
   }
 
 
