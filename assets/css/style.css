@@ -135,6 +135,11 @@ blockquote {
 .row {
   padding: 0rem 1rem; }
 
+figure.row {
+  padding-right: 0; }
+  figure.row .card-block, figure.row .card-img-top {
+    padding-right: 0; }
+
 footer {
   justify-content: space-between; }
 
@@ -209,11 +214,11 @@ p.text-holder {
   margin-top: 1rem; }
 
 span.audio-date {
-  margin-left: 7rem;
+  margin-left: 6.6rem;
   display: block;
   margin-top: -1rem;
   margin-bottom: 1rem; }
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     span.audio-date {
       margin-top: unset; } }
 
@@ -311,7 +316,8 @@ section.text .text-column, section.text .text-notes {
 
 @media (max-width: 1023px) {
   .card-img-top {
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem;
+    height: 10rem !important; } }
 
 .posts {
   height: 85vh;
