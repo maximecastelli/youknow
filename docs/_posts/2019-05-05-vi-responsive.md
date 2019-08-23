@@ -9,7 +9,7 @@ published: true
 enable: true
 
 video:
-  videoID: 
+  videoID: 25BTEcEdFBY
   videoImg: responsive.jpg
 
 audio:
