@@ -10,7 +10,7 @@ enable: true
 
 video:
   videoID: 
-  videoImg: 
+  videoImg: responsive.jpg
 
 audio:
   trackID: Track6
