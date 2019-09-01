@@ -6234,7 +6234,7 @@ span.bullet {
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
-  margin: .5rem 1rem .5rem 0;
+  margin: .7rem 1rem .5rem 0;
   border-radius: 100%;
   background: #ff0000;
   display: block; }
@@ -6269,10 +6269,10 @@ span.bullet {
   display: flex; }
 
 .posts .post {
-  margin: 2rem 0rem; }
+  margin: 2rem 0rem 2rem 0; }
 
 .posts .posts-text .post {
-  margin: 0 0 1rem 1rem; }
+  margin: 0 0 1rem 0rem; }
 
 .posts .posts-text .post-separator {
   display: block;
@@ -6324,8 +6324,9 @@ span.text-note .note-switch {
 
 .video-notes {
   margin: 1rem;
-  height: 25vh;
-  padding: 0; }
+  height: 24vh;
+  padding: 0;
+  margin-top: 2rem; }
 
 .video-infos {
   margin-top: 1.5rem; }

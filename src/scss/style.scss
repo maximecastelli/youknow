@@ -238,7 +238,7 @@ span.bullet{
     width: 1rem;
     min-width: 1rem;
 
-    margin: .5rem 1rem .5rem 0;
+    margin: .7rem 1rem .5rem 0;
     //padding: 1rem;
     border-radius: 100%;
     background: map-get($colors, primary);
@@ -284,11 +284,11 @@ span.bullet{
 
 .posts{
     .post{
-        margin: 2rem 0rem;
+        margin: 2rem 0rem 2rem 0;
     }
     .posts-text{
         .post{
-            margin: 0 0 1rem 1rem;
+            margin: 0 0 1rem 0rem;
         }
         .post-separator{
             display: block;
@@ -370,8 +370,9 @@ span.text-note{
 
 .video-notes{
     margin: 1rem;
-    height: 25vh;
+    height: 24vh;
     padding: 0;
+    margin-top:2rem;
 }
 
 .video-infos{
