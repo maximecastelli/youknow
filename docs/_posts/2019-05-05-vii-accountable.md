@@ -6,7 +6,7 @@ slug: vii-accountable
 date: 2019-05-05 12:18 +0100
 release: 2019-09-06 22:28 +0200
 published: true
-enable: false
+enable: true
 
 video:
   videoID: j9J_4TCJHxQ
