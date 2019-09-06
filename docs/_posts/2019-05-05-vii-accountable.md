@@ -18,8 +18,8 @@ audio:
   trackImg: img.png
 
 text:
-  textID: 
-  textFile: 
+  textID: "VII.ACCOUNTABLE"
+  textFile: 2019-09-06-accountable.txt
 
 notes:
   - note: "68"
