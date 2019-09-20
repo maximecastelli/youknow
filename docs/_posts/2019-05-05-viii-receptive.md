@@ -19,7 +19,7 @@ audio:
 
 text:
   textID: "VIII-Receptive"
-  textFile: receptive.txt
+  textFile: 2019-09-20-receptive.txt
    
 notes:
   - note: "81"
@@ -36,7 +36,8 @@ notes:
 
   - note: "83"
     num: 83
-    videoTS: 29    audioTS: 24
+    videoTS: 29    
+audioTS: 24
     content: "Bbc.co.uk. (2018). <i>Object-Based Media - BBC R&D</i>. [online] Available at&#58; https://www.bbc.co.uk/rd/object-based-media [Accessed 3 Oct. 2018]."
 
   - note: "84"
