@@ -94,6 +94,4 @@ notes:
     audioTS: 512
     content: "BBC. (2018, September 3). <i>AI - What you need to know</i>. [Lecture] Artificial intelligence, society and the media: How can we flourish in the age of AI?. BBC Radio Theatre, London."
 
-
-
 ---
