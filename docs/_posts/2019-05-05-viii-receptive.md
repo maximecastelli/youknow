@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VIII. RECEPTIVE
+title: "VIII. RECEPTIVE"
 subtitle: "News for Cyborgs"
 slug: viii-receptive
 date: 2019-05-05 12:18 +0100
